@@ -169,7 +169,7 @@ being able to interact with the shell is becoming a necessary skill.
 We can build on the command-line skills covered here
 to tackle a wide range of scientific questions and computational challenges.
 
-## Ned's Pipeline: Starting Point
+## Nelle's Pipeline: Starting Point
 
 Nelle Nemo, a marine biologist,
 has just returned from a six-month survey of the
