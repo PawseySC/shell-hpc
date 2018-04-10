@@ -319,22 +319,6 @@ or available locally via: info '(coreutils) ls invocation'
 ~~~
 {: .output}
 
-> ## Unsupported command-line options
-> If you try to use an option (flag) that is not supported, `ls` and other programs
-> will usually print an error message similar to this:
->
-> ~~~
-> $ ls -j
-> ~~~
-> {: .language-bash}
-> 
-> ~~~
-> ls: invalid option -- 'j'
-> Try 'ls --help' for more information.
-> ~~~
-> {: .error}
-{: .callout}
-
 #### The `man` command
 
 The other way to learn about `ls` is to type 
@@ -574,22 +558,8 @@ equivalent to `ls -Fa`.
 > is used.
 {: .callout}
 
-> ## Orthogonality
->
-> The special names `.` and `..` don't belong to `cd`;
-> they are interpreted the same way by every program.
-> For example,
-> if we are in `/Users/nelle/data`,
-> the command `ls ..` will give us a listing of `/Users/nelle`.
-> When the meanings of the parts are the same no matter how they're combined,
-> programmers say they are **orthogonal**:
-> Orthogonal systems tend to be easier for people to learn
-> because there are fewer special cases and exceptions to keep track of.
-{: .callout}
-
-These then, are the basic commands for navigating the filesystem on your computer:
-`pwd`, `ls` and `cd`.  Let's explore some variations on those commands.  What happens
-if you type `cd` on its own, without giving
+`pwd`, `ls` and `cd` are the basic commands for navigating the filesystem on your computer.
+Let's explore some variations on those commands.  What happens if you type `cd` on its own, without giving
 a directory?  
 
 ~~~
@@ -629,7 +599,7 @@ current location.
 
 So far, when specifying directory names, or even a directory path (as above),
 we have been using **relative paths**.  When you use a relative path with a command
-like `ls` or `cd`, it tries to find that location  from where we are,
+like `ls` or `cd`, it tries to find that location from where we are,
 rather than from the root of the file system.  
 
 However, it is possible to specify the **absolute path** to a directory by
@@ -704,122 +674,3 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > > 9. Yes: goes up one level.
 > {: .solution}
 {: .challenge}
-
-> ## Relative Path Resolution
->
-> Using the filesystem diagram below, if `pwd` displays `/Users/thing`,
-> what will `ls -F ../backup` display?
->
-> 1.  `../backup: No such file or directory`
-> 2.  `2012-12-01 2013-01-08 2013-01-27`
-> 3.  `2012-12-01/ 2013-01-08/ 2013-01-27/`
-> 4.  `original/ pnas_final/ pnas_sub/`
->
-> ![File System for Challenge Questions](../fig/filesystem-challenge.svg)
->
-> > ## Solution
-> > 1. No: there *is* a directory `backup` in `/Users`.
-> > 2. No: this is the content of `Users/thing/backup`,
-> >    but with `..` we asked for one level further up.
-> > 3. No: see previous explanation.
-> > 4. Yes: `../backup/` refers to `/Users/backup/`.
-> {: .solution}
-{: .challenge}
-
-> ## `ls` Reading Comprehension
->
-> Assuming a directory structure as in the above Figure
-> (File System for Challenge Questions), if `pwd` displays `/Users/backup`,
-> and `-r` tells `ls` to display things in reverse order,
-> what command will display:
->
-> ~~~
-> pnas_sub/ pnas_final/ original/
-> ~~~
-> {: .output}
->
-> 1.  `ls pwd`
-> 2.  `ls -r -F`
-> 3.  `ls -r -F /Users/backup`
-> 4.  Either #2 or #3 above, but not #1.
->
-> > ## Solution
-> >  1. No: `pwd` is not the name of a directory.
-> >  2. Yes: `ls` without directory argument lists files and directories
-> >     in the current directory.
-> >  3. Yes: uses the absolute path explicitly.
-> >  4. Correct: see explanations above.
-> {: .solution}
-{: .challenge}
-
-### Nelle's Pipeline: Organizing Files
-
-Knowing just this much about files and directories,
-Nelle is ready to organize the files that the protein assay machine will create.
-First,
-she creates a directory called `north-pacific-gyre`
-(to remind herself where the data came from).
-Inside that,
-she creates a directory called `2012-07-03`,
-which is the date she started processing the samples.
-She used to use names like `conference-paper` and `revised-results`,
-but she found them hard to understand after a couple of years.
-(The final straw was when she found herself creating
-a directory called `revised-revised-results-3`.)
-
-> ## Sorting Output
->
-> Nelle names her directories "year-month-day",
-> with leading zeroes for months and days,
-> because the shell displays file and directory names in alphabetical order.
-> If she used month names,
-> December would come before July;
-> if she didn't use leading zeroes,
-> November ('11') would come before July ('7'). Similarly, putting the year first
-> means that June 2012 will come before June 2013.
-{: .callout}
-
-Each of her physical samples is labelled according to her lab's convention
-with a unique ten-character ID,
-such as "NENE01729A".
-This is what she used in her collection log
-to record the location, time, depth, and other characteristics of the sample,
-so she decides to use it as part of each data file's name.
-Since the assay machine's output is plain text,
-she will call her files `NENE01729A.txt`, `NENE01812A.txt`, and so on.
-All 1520 files will go into the same directory.
-
-Now in her current directory `data-shell`,
-Nelle can see what files she has using the command:
-
-~~~
-$ ls north-pacific-gyre/2012-07-03/
-~~~
-{: .language-bash}
-
-This is a lot to type,
-but she can let the shell do most of the work through what is called **tab completion**.
-If she types:
-
-~~~
-$ ls nor
-~~~
-{: .language-bash}
-
-and then presses tab (the tab key on her keyboard),
-the shell automatically completes the directory name for her:
-
-~~~
-$ ls north-pacific-gyre/
-~~~
-{: .language-bash}
-
-If she presses tab again,
-Bash will add `2012-07-03/` to the command,
-since it's the only possible completion.
-Pressing tab again does nothing,
-since there are 19 possibilities;
-pressing tab twice brings up a list of all the files,
-and so on.
-This is called **tab completion**,
-and we will see it in many other tools as we go on.
