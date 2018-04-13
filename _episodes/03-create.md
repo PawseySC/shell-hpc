@@ -173,9 +173,9 @@ return to the shell.
 > This means that you can use `Control-G` to get help and `Control-O` to save your
 > file.
 > 
-> Note: to use Nano on Magnus you must load the nano module using the following command
+> Note: to use Nano on Magnus you must load the nano module using the following command:
 >  
-> * 'module load nano'
+> * `module load nano`
 > 
 {: .callout}
 
