@@ -142,6 +142,11 @@ $ nano draft.txt
 > your computer's start menu, it may want to save files in your desktop or
 > documents directory instead. You can change this by navigating to
 > another directory the first time you "Save As..."
+> 
+> Note: to use Nano on Magnus you must load the nano module using the following command:
+>  
+> * `module load nano`
+>
 {: .callout}
 
 Let's type in a few lines of text.
@@ -172,10 +177,6 @@ return to the shell.
 > In nano, along the bottom of the screen you'll see `^G Get Help ^O WriteOut`.
 > This means that you can use `Control-G` to get help and `Control-O` to save your
 > file.
-> 
-> Note: to use Nano on Magnus you must load the nano module using the following command:
->  
-> * `module load nano`
 > 
 {: .callout}
 
