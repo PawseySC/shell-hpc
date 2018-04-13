@@ -19,18 +19,6 @@ keypoints:
 - "The shell's main disadvantages are its primarily textual nature and how cryptic its commands and operation can be."
 ---
 ### Background
-At a high level, computers do four things:
-
--   run programs
--   store data
--   communicate with each other, and
--   interact with us
-
-They can do the last of these in many different ways,
-including through a keyboard and mouse, or touch screen interfaces, or speech recognition using systems.
-While such hardware interfaces are becoming more commonplace, most interaction is still
-done using screens, mice, touchpads and keyboards.
-
 We are all familiar with **graphical user interfaces** (GUI - windows, icons and pointers). 
 They are easy to learn and fantastic for simple tasks where a vocabulary consisting of
 "click" translates easily into "do the thing I want". But this magic relies on 
@@ -102,13 +90,8 @@ later today. Those with a Mac might recognize the output in this example.
 Finally, the shell again prints the prompt and waits for you to type the next 
 command.
 
-In the examples for this lesson, we'll show the prompt as `$ `. You can make your 
-prompt look the same by entering the command `PS1='$ '`. But you can also leave 
-your prompt as it is - often the prompt includes useful information about who and where 
-you are.
-
 Open a shell window and try entering `ls -F /` for yourself (don't forget that spaces
-and capitalization are important!). You can change the prompt too, if you like.
+and capitalization are important!). 
 
 ### How does the shell know what `ls` and its flags mean?
 
@@ -162,14 +145,14 @@ commands can be written into a *script*, improving the reproducibility of
 workflows and allowing you to repeat them easily.
 
 In addition, the command line is often the easiest way to interact with remote machines and supercomputers.
-Familiarity with the shell is near essential to run a variety of specialized tools and resources
-including high-performance computing systems.
+Familiarity with the shell is essential to use Pawsey resources and will be used in Pawsey training.
+
 As clusters and cloud computing systems become more popular for scientific data crunching,
 being able to interact with the shell is becoming a necessary skill.
 We can build on the command-line skills covered here
 to tackle a wide range of scientific questions and computational challenges.
 
-## Nelle's Pipeline: Starting Point
+## Nelle's Pipeline: Example used in material
 
 Nelle Nemo, a marine biologist,
 has just returned from a six-month survey of the
