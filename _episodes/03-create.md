@@ -380,14 +380,14 @@ so let's change the file's name using `mv`,
 which is short for "move":
 
 ~~~
-$ mv thesis/draft.txt thesis/quotes.txt
+$ mv draft.txt quotes.txt
 ~~~
 {: .language-bash}
 
 The first argument tells `mv` what we're "moving",
 while the second is where it's to go.
 In this case,
-we're moving `thesis/draft.txt` to `thesis/quotes.txt`,
+we're moving `draft.txt` to `quotes.txt`,
 which has the same effect as renaming the file.
 Sure enough,
 `ls` shows us that `thesis` now contains one file called `quotes.txt`:
