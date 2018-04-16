@@ -1,6 +1,6 @@
 ---
 title: "Working With Files and Directories"
-teaching: 25
+teaching: 20
 exercises: 10
 questions:
 - "How can I create, copy, and delete files and directories?"
@@ -407,81 +407,29 @@ silently overwrite any existing file with the same name, which could
 lead to data loss. An additional flag, `mv -i` (or `mv --interactive`),
 can be used to make `mv` ask you for confirmation before overwriting.
 
-Just for the sake of consistency,
-`mv` also works on directories
-
-Let's move `quotes.txt` into the current working directory.
-We use `mv` once again,
-but this time we'll just use the name of a directory as the second argument
-to tell `mv` that we want to keep the filename,
-but put the file somewhere new.
-(This is why the command is called "move".)
-In this case,
-the directory name we use is the special directory name `.` that we mentioned earlier.
-
-~~~
-$ mv thesis/quotes.txt .
-~~~
-{: .language-bash}
-
-The effect is to move the file from the directory it was in to the current working directory.
-`ls` now shows us that `thesis` is empty:
-
-~~~
-$ ls thesis
-~~~
-{: .language-bash}
-
-Further,
-`ls` with a filename or directory name as an argument only lists that file or directory.
-We can use this to see that `quotes.txt` is still in our current directory:
-
-~~~
-$ ls quotes.txt
-~~~
-{: .language-bash}
-
-~~~
-quotes.txt
-~~~
-{: .output}
-
 
 The `cp` command works very much like `mv`,
 except it copies a file instead of moving it.
-We can check that it did the right thing using `ls`
-with two paths as arguments --- like most Unix commands,
-`ls` can be given multiple paths at once:
 
 ~~~
-$ cp quotes.txt thesis/quotations.txt
-$ ls quotes.txt thesis/quotations.txt
+$ cp quotes.txt quotations.txt
 ~~~
 {: .language-bash}
-
-~~~
-quotes.txt   thesis/quotations.txt
-~~~
-{: .output}
 
 To prove that we made a copy,
-let's delete the `quotes.txt` file in the current directory
-and then run that same `ls` again.
+let's run `ls` again.
 
 ~~~
-$ rm quotes.txt
-$ ls quotes.txt thesis/quotations.txt
+$ ls 
 ~~~
 {: .language-bash}
 
 ~~~
-ls: cannot access quotes.txt: No such file or directory
-thesis/quotations.txt
+quotes.txt quotations.txt
 ~~~
 {: .error}
 
-This time it tells us that it can't find `quotes.txt` in the current directory,
-but it does find the copy in `thesis` that we didn't delete.
+There should be two files.  You can check each file has the same contents.
 
 > ## What's In A Name?
 >
