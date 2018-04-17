@@ -420,61 +420,6 @@ $ find . -name '*.txt'
 > while `find` searches for things with certain properties and shows them.
 {: .callout}
 
-As we said earlier,
-the command line's power lies in combining tools.
-We've seen how to do that with pipes;
-let's look at another technique.
-As we just saw,
-`find . -name '*.txt'` gives us a list of all text files in or below the current directory.
-How can we combine that with `wc -l` to count the lines in all those files?
-
-The simplest way is to put the `find` command inside `$()`:
-
-~~~
-$ wc -l $(find . -name '*.txt')
-~~~
-{: .language-bash}
-
-~~~
-11 ./haiku.txt
-300 ./data/two.txt
-21022 ./data/LittleWomen.txt
-70 ./data/one.txt
-21403 total
-~~~
-{: .output}
-
-When the shell executes this command,
-the first thing it does is run whatever is inside the `$()`.
-It then replaces the `$()` expression with that command's output.
-Since the output of `find` is the four filenames `./data/one.txt`, `./data/LittleWomen.txt`, `./data/two.txt`, and `./haiku.txt`,
-the shell constructs the command:
-
-~~~
-$ wc -l ./data/one.txt ./data/LittleWomen.txt ./data/two.txt ./haiku.txt
-~~~
-{: .language-bash}
-
-which is what we wanted.
-This expansion is exactly what the shell does when it expands wildcards like `*` and `?`,
-but lets us use any command we want as our own "wildcard".
-
-It's very common to use `find` and `grep` together.
-The first finds files that match a pattern;
-the second looks for lines inside those files that match another pattern.
-Here, for example, we can find PDB files that contain iron atoms
-by looking for the string "FE" in all the `.pdb` files above the current directory:
-
-~~~
-$ grep "FE" $(find .. -name '*.pdb')
-~~~
-{: .language-bash}
-
-~~~
-../data/pdb/heme.pdb:ATOM     25 FE           1      -0.924   0.535  -0.518
-~~~
-{: .output}
-
 
 > ## Binary Files
 >
