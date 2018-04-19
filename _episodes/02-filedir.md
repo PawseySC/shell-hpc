@@ -1,6 +1,6 @@
 ---
 title: "Navigating Files and Directories"
-teaching: 20
+teaching: 15
 exercises: 10
 questions:
 - "How can I move around on my computer?"
@@ -104,19 +104,6 @@ because its name begins with `/`.
 > it refers to the root directory. When it appears *inside* a name,
 > it's just a separator.
 {: .callout}
-
-Underneath `/Users`,
-we find one directory for each user with an account on Nelle's machine,
-her colleagues the Mummy and Wolfman.  
-
-![Home Directories](../fig/home-directories.svg)
-
-The Mummy's files are stored in `/Users/imhotep`,
-Wolfman's in `/Users/larry`,
-and Nelle's in `/Users/nelle`.  Because Nelle is the user in our
-examples here, this is why we get `/Users/nelle` as our home directory.  
-Typically, when you open a new command prompt you will be in
-your home directory to start.  
 
 Now let's learn the command that will let us see the contents of our
 own filesystem.  We can see what's in our home directory by running `ls`,
