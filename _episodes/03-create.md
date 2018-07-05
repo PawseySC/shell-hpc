@@ -21,7 +21,7 @@ keypoints:
 
 We now know how to explore files and directories,
 but how do we create them in the first place?
-Let's go back to our `data-shell` directory on the Desktop
+Let's go back to our `data-shell` directory
 and use `ls -F` to see what it contains:
 
 ~~~
@@ -365,8 +365,9 @@ $ pwd
 
 ~~~
 $ mkdir thesis
-$ nano thesis/draft.txt
-$ ls thesis
+$ cd thesis 
+$ nano draft.txt
+$ ls
 ~~~
 {: .language-bash}
 
