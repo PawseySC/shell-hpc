@@ -17,7 +17,7 @@ keypoints:
 - "A shell is a program whose primary purpose is to read commands and run other programs."
 - "The shell's main advantages are its high action-to-keystroke ratio, its support for automating repetitive tasks, and its capacity to access networked machines."
 - "The shell's main disadvantages are its primarily textual nature and how cryptic its commands and operation can be."
-- "shell tips 1) *CTRL+C*: to kill / exit current process 2) *Tab autocomplete*: esp. useful to enter long complex filenames 3) *UP arrow*: gives you previous commands entered"
+- "Shell tips a) **CTRL+C:** to kill / exit current process b) **Tab autocomplete:** esp. useful to enter long complex filenames c) **UP arrow:** gives you previous commands entered"
 ---
 ### Background
 We are all familiar with **graphical user interfaces** (GUI - windows, icons and pointers). 
