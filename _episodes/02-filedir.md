@@ -370,7 +370,7 @@ We can also use `ls` to see the contents of a different directory.  Let's take a
 look at our `data-shell` directory by running `ls -F data-shell`,
 i.e.,
 the command `ls` with the `-F` **flag** and the **argument**  `data-shell`.
-The argument `Desktop` tells `ls` that
+The argument `data-shell` tells `ls` that
 we want a listing of something other than our current working directory:
 
 ~~~
@@ -387,26 +387,7 @@ it's possible to put hundreds of files in our home directory,
 just as it's possible to pile hundreds of printed papers on our desk,
 but it's a self-defeating strategy.
 
-Now that we know the `data-shell` directory is located on our Desktop, we
-can do two things.  
-
-First, we can look at its contents, using the same strategy as before, passing
-a directory name to `ls`:
-
-~~~
-$ ls -F data-shell
-~~~
-{: .language-bash}
-
-~~~
-creatures/          molecules/          notes.txt           solar.pdf
-data/               north-pacific-gyre/ pizza.cfg           writing/
-~~~
-{: .output}
-
-Second, we can actually change our location to a different directory, so
-we are no longer located in
-our home directory.  
+Also we can change our location to a different directory.
 
 The command to change locations is `cd` followed by a
 directory name to change our working directory.
