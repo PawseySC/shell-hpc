@@ -367,26 +367,18 @@ the shell thinks we're trying to run a command called `ls-F`,
 which doesn't exist.
 
 We can also use `ls` to see the contents of a different directory.  Let's take a
-look at our `Desktop` directory by running `ls -F Desktop`,
+look at our `data-shell` directory by running `ls -F data-shell`,
 i.e.,
-the command `ls` with the `-F` **flag** and the **argument**  `Desktop`.
+the command `ls` with the `-F` **flag** and the **argument**  `data-shell`.
 The argument `Desktop` tells `ls` that
 we want a listing of something other than our current working directory:
 
 ~~~
-$ ls -F Desktop
+$ ls -F data-shell
 ~~~
 {: .language-bash}
 
-~~~
-data-shell/
-~~~
-{: .output}
-
-Your output should be a list of all the files and sub-directories on your
-Desktop, including the `data-shell` directory you downloaded at
-the start of the lesson.  Take a look at your Desktop to confirm that
-your output is accurate.  
+Your output should be a list of all the files and sub-directories in your `data-shell` directory 
 
 As you may now see, using a bash shell is strongly dependent on the idea that
 your files are organized in a hierarchical file system.
@@ -402,7 +394,7 @@ First, we can look at its contents, using the same strategy as before, passing
 a directory name to `ls`:
 
 ~~~
-$ ls -F Desktop/data-shell
+$ ls -F data-shell
 ~~~
 {: .language-bash}
 
@@ -424,21 +416,18 @@ the command doesn't change the directory,
 it changes the shell's idea of what directory we are in.
 
 Let's say we want to move to the `data` directory we saw above.  We can
-use the following series of commands to get there:
+use the following command to get there:
 
 ~~~
-$ cd Desktop
-$ cd data-shell
 $ cd data
 ~~~
 {: .language-bash}
 
-These commands will move us from our home directory onto our Desktop, then into
-the `data-shell` directory, then into the `data` directory.  `cd` doesn't print anything,
+This will move us from our `data-shell` directory into the `data` directory.  `cd` doesn't print anything,
 but if we run `pwd` after it, we can see that we are now
-in `/Users/nelle/Desktop/data-shell/data`.
+in `/home/username/data-shell/data`.
 If we run `ls` without arguments now,
-it lists the contents of `/Users/nelle/Desktop/data-shell/data`,
+it lists the contents of `/home/username/data-shell/data`,
 because that's where we now are:
 
 ~~~
@@ -447,7 +436,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/data
+/home/username/data-shell/data
 ~~~
 {: .output}
 
@@ -495,7 +484,7 @@ $ cd ..
 or more succinctly,
 the **parent** of the current directory.
 Sure enough,
-if we run `pwd` after running `cd ..`, we're back in `/Users/nelle/Desktop/data-shell`:
+if we run `pwd` after running `cd ..`, we're back in `/home/username/data-shell`:
 
 ~~~
 $ pwd
@@ -503,7 +492,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell
+/home/username/data-shell
 ~~~
 {: .output}
 
@@ -562,7 +551,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle
+/home/username
 ~~~
 {: .output}
 
@@ -574,7 +563,7 @@ three commands, but we can actually string together the list of directories
 to move to `data` in one step:
 
 ~~~
-$ cd Desktop/data-shell/data
+$ cd /data-shell/data
 ~~~
 {: .language-bash}
 
@@ -606,12 +595,12 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/data
+/home/username/data-shell/data
 ~~~
 {: .output}
 
 ~~~
-$ cd /Users/nelle/Desktop/data-shell
+$ cd /home/username/data-shell/data
 ~~~
 {: .language-bash}
 
@@ -621,9 +610,9 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 >
 > The shell interprets the character `~` (tilde) at the start of a path to
 > mean "the current user's home directory". For example, if Nelle's home
-> directory is `/Users/nelle`, then `~/data` is equivalent to
-> `/Users/nelle/data`. This only works if it is the first character in the
-> path: `here/there/~/elsewhere` is *not* `here/there/Users/nelle/elsewhere`.
+> directory is `/home/username`, then `~/data` is equivalent to
+> `/home/username/data`. This only works if it is the first character in the
+> path: `here/there/~/elsewhere` is *not* `here/there/home/username/elsewhere`.
 >
 > Another shortcut is the `-` (dash) character.  `cd` will translate `-` into
 > *the previous directory I was in*, which is faster than having to remember,
