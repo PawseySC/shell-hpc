@@ -379,6 +379,11 @@ $ ls -F data-shell
 {: .language-bash}
 
 Your output should be a list of all the files and sub-directories in your `data-shell` directory 
+~~~
+creatures/          molecules/          notes.txt           solar.pdf
+data/               north-pacific-gyre/ pizza.cfg           writing/
+~~~
+{: .output}
 
 As you may now see, using a bash shell is strongly dependent on the idea that
 your files are organized in a hierarchical file system.
