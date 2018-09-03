@@ -30,7 +30,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell
+/Users/username/data-shell
 ~~~
 {: .output}
 
@@ -263,7 +263,7 @@ $ ls
 {: .callout}
 
 Let's re-create that file
-and then move up one directory to `/Users/nelle/Desktop/data-shell` using `cd ..`:
+and then move up one directory to `/home/username/data-shell` using `cd ..`:
 
 ~~~
 $ pwd
@@ -271,7 +271,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell/thesis
+//home/username/data-shell/thesis
 ~~~
 {: .output}
 
@@ -350,8 +350,6 @@ $ rm -r thesis
 {: .callout}
 
 Let's create that directory and file one more time.
-(Note that this time we're running `nano` with the path `thesis/draft.txt`,
-rather than going into the `thesis` directory and running `nano` on `draft.txt` there.)
 
 ~~~
 $ pwd
@@ -359,7 +357,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/nelle/Desktop/data-shell
+/home/username/data-shell
 ~~~
 {: .output}
 
