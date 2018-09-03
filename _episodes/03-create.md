@@ -30,7 +30,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-/Users/username/data-shell
+/home/username/data-shell
 ~~~
 {: .output}
 
