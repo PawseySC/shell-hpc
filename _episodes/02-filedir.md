@@ -498,7 +498,7 @@ $ ls -F -a
 
 `-a` stands for "show all";
 it forces `ls` to show us file and directory names that begin with `.`,
-such as `..` (which, if we're in `/Users/nelle`, refers to the `/Users` directory)
+such as `..` 
 As you can see,
 it also displays another special directory that's just called `.`,
 which means "the current working directory".
@@ -544,12 +544,11 @@ $ pwd
 It turns out that `cd` without an argument will return you to your home directory,
 which is great if you've gotten lost in your own filesystem.  
 
-Let's try returning to the `data` directory from before.  Last time, we used
-three commands, but we can actually string together the list of directories
+Let's try returning to the `data` directory from before.  We can actually string together the list of directories
 to move to `data` in one step:
 
 ~~~
-$ cd /data-shell/data
+$ cd data-shell/data
 ~~~
 {: .language-bash}
 
@@ -595,10 +594,9 @@ Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 > ## Two More Shortcuts
 >
 > The shell interprets the character `~` (tilde) at the start of a path to
-> mean "the current user's home directory". For example, if Nelle's home
-> directory is `/home/username`, then `~/data` is equivalent to
-> `/home/username/data`. This only works if it is the first character in the
-> path: `here/there/~/elsewhere` is *not* `here/there/home/username/elsewhere`.
+> mean "the current user's home directory". For example, `cd ~/data-shell/data` is equivalent to
+> `/home/username/data-shell/data`. This only works if it is the first character in the
+> path: `here/there/~/elsewhere` does *not* produce `here/there/home/username/elsewhere`.
 >
 > Another shortcut is the `-` (dash) character.  `cd` will translate `-` into
 > *the previous directory I was in*, which is faster than having to remember,
