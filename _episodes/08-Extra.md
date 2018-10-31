@@ -11,21 +11,31 @@ keypoints:
 - "TO DO"
 - "TO DO"
 keypoints:
-- "TO DO"
+- "Use ls -l to view the permissions for a specific file."
+- "Use chmod to change permissions on a file or directory."
 - "TO DO."
 ---
 ### Permissions
-Linux is a multi-user OS that is based on the Unix concepts of file ownership and permissions to provide security at the file system level.
+Unix controls who can read, modify, and run files using concepts of *file ownership* and *permissions* to provide security at the file system level.
 
-Add more here
+
+Users can belong to any number of groups, each of which has a unique group name and numeric group ID. The list of who’s in what group is usually stored in the file /etc/group. (If you’re in front of a Unix machine right now, try running cat /etc/group to look at that file.)
+
+Now let’s look at files and directories. Every file and directory on a Unix computer belongs to one owner and one group. Along with each file’s content, the operating system stores the numeric IDs of the user and group that own it.
+
+The user-and-group model means that for each file every user on the system falls into one of three categories: the owner of the file, someone in the file’s group, and everyone else.
+
+Let's run ls -l
+
+Let's run chmod
  
-### Sudo
+## Sudo
 
 Add sudo info here
 
-### What is SSH?
+## What is SSH?
 
-To make a remote login, we issue the command ssh username@computer 
+To make a remote login, we issue the command ssh username@computer (intro to supercomputing)
 
 ~~~
 bash-3.2$ 
@@ -38,14 +48,15 @@ Password: ********
 
 ### Transferring files
 
-##scp##
+##scp
 
 To copy a file, we specify the source and destination paths, either of which may include computer names. If we leave out a computer name, scp assumes we mean the machine we’re running on.
 
-##Wget##
+##Wget
 
 Wget is a simple tool developed for the GNU Project that downloads files with the HTTP, HTTPS and FTP protocols. It is widely used by Unix-like users and is available with most Linux distributions.
 
-[Pawsey transferring files video](https://youtu.be/3drzw-4aZTg)
+Further information on transferring files esp. within Pawsey 
+[Pawsey video on transferring files](https://youtu.be/3drzw-4aZTg)
 
 
