@@ -18,6 +18,7 @@ keypoints:
 ### Permissions
 Unix controls who can read, modify, and run files using concepts of *file ownership* and *permissions* to provide security at the file system level.
 
+Using Pawsey systems will require knowledge of unix permissions.   
 
 Users can belong to any number of groups, each of which has a unique group name and numeric group ID. The list of who’s in what group is usually stored in the file /etc/group. (If you’re in front of a Unix machine right now, try running cat /etc/group to look at that file.)
 
@@ -28,6 +29,8 @@ The user-and-group model means that for each file every user on the system falls
 Let's run ls -l
 
 Let's run chmod
+
+Further information - http://www.nersc.gov/users/storage-and-file-systems/unix-file-permissions/
  
 ## Sudo
 
