@@ -20,17 +20,34 @@ Unix controls who can read, modify, and run files using concepts of *file owners
 
 Using Pawsey systems will require knowledge of unix permissions.   
 
-Users can belong to any number of groups, each of which has a unique group name and numeric group ID. The list of who’s in what group is usually stored in the file /etc/group. (If you’re in front of a Unix machine right now, try running cat /etc/group to look at that file.)
+Users can belong to any number of groups, each of which has a unique group name and numeric group ID. The list of who’s in what group is usually stored in the file /etc/group.
 
 Now let’s look at files and directories. Every file and directory on a Unix computer belongs to one owner and one group. Along with each file’s content, the operating system stores the numeric IDs of the user and group that own it.
 
 The user-and-group model means that for each file every user on the system falls into one of three categories: the owner of the file, someone in the file’s group, and everyone else.
 
-Let's run ls -l
+How do you change permissions?
 
-Let's run chmod
+We use the *chmod* command.  The chmod command specifies read-write-execute permissions for the user, and read-execute permissions for group and other.
 
-Further information - http://www.nersc.gov/users/storage-and-file-systems/unix-file-permissions/
+Let's create a file, say permissions.txt and experiment with changing permissions
+
+~~~
+bash-3.2$ nano permissions.txt
+bash-3.2$ ls -l
+bash-3.2$ chmod 777 permissions.txt
+bash-3.2$ ls -l
+bash-3.2$ chmod 755 permissions.txt
+bash-3.2$ ls -l
+bash-3.2$ chmod 600 permissions.txt
+bash-3.2$ ls -l
+
+~~~
+{: .language-bash}
+
+
+
+Examples from another Supercomputing Centre - http://www.nersc.gov/users/storage-and-file-systems/unix-file-permissions/
  
 ## Sudo
 
