@@ -175,14 +175,24 @@ Further information on transferring files esp. within Pawsey
 
 ## SSH
 
-To make a remote login, we issue the command ssh username@computer (intro to supercomputing)
+If we want to run some commands on another machine, such as a Pawsey supercomputer or virtual machine? To do this, we have to first log into that machine. We call this a remote login.
+
+In order for us to be able to login, the remote computer must be runing a remote login server and we will run a client program that can talk to that server. The client program passes our login credentials to the remote login server and, if we are allowed to login, that server then runs a shell for us on the remote computer.
+
+Once our local client is connected to the remote server, everything we type into the client is passed on, by the server, to the shell running on the remote computer. That remote shell runs those commands on our behalf, just as a local shell would.
+
+To make a remote login, we issue use the followeing syntax 'ssh username@remote_host' 
+
+The remote host is the IP address or domain name that you are trying to connect to 
 
 ~~~
 bash-3.2$ 
-bash-3.2$ ssh username@computer
+bash-3.2$ ssh bob@magnus.pawsey.org.au
 Password: ********
 ~~~
 {: .language-bash}
+
+Mention SSH keys?
 
 ## Useful commands
 
