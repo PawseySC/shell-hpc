@@ -57,52 +57,13 @@ Position   |   Meaning
 8, 9, 10	 |  read, write, execute permission for other (everyone)
 
 
-## How do you change permissions?
-
-We use the *chmod* command.  The chmod command specifies read-write-execute permissions for the user, and read-execute permissions for group and other.
-
-It can be applied recusively to directories using the '-R' option.  Octal values or symbolic representations of the flags can be used to change permissions
-
-# Octal
-
-Octal digit | Permission | Binary representation (rwx)
---- | --- | ---
-7 | read, write and execute | 111
-6 | read and write | 110
-5 | read and execute | 101
-4 | read only | 100 
-3 | write and execute | 011
-2 | write only | 010
-1 | execute only | 001
-0 | none | 000
-
-4 = read | 2 = write | 1 = execute
-
-# Symbolic
-
-| Reference | Class | Description |
-| --- | --- | --- | 
-| u | user | file's owner |
-| g | group | members of the file's group |
-| o | others | users who are niether file's owner or members of file's group |
-| a | all | all three of the above |
-
-| Operator | Description |
-| --- | --- |
-| + | adds the specified modes from specific classes |
-| - | removes the specified modes from the specified classes |
-| = | the modes specified are to be made the exact modes for the specified classes |
-
-e.g. *chmod a-w* 
-remove write (w) permissions for all classes (a), preventing anyone from writing to the file
-
 > ## How do you change permissions?
 >
 > We use the *chmod* command.  The chmod command specifies read-write-execute permissions for the user, and read-execute  permissions for group and other.
 >
 > It can be applied recusively to directories using the '-R' option.  Octal values or symbolic representations of the flags > can be used to change permissions
 >
-> # Octal
+> ### Octal
 >
 > Octal digit | Permission | Binary representation (rwx)
 > --- | --- | ---
@@ -117,7 +78,7 @@ remove write (w) permissions for all classes (a), preventing anyone from writing
 > 
 > 4 = read | 2 = write | 1 = execute
 >
-> # Symbolic
+> ### Symbolic
 >
 > | Reference | Class | Description |
 > | --- | --- | --- | 
@@ -177,23 +138,7 @@ remove write (w) permissions for all classes (a), preventing anyone from writing
 > 
 > Examples from another Supercomputing Centre - http://www.nersc.gov/users/storage-and-file-systems/unix-file-permissions/
 > 
-> 
-
-
-
-
-
-
-
-~~~
-
-~~~
-{: .language-bash}
-
-~~~
-
-~~~
-{: .output}
+{: .callout}
 
 
  
