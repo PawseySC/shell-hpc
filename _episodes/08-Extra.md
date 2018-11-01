@@ -45,9 +45,7 @@ The output above represents:
 6) date of last modification
 7) name of file
 
-For the ten permission flags
-
-drwxrwxr-x
+For the ten permission flags (drwxrwxr-x)
 
 Position   |   Meaning
 ----|----
@@ -55,6 +53,10 @@ Position   |   Meaning
 2, 3, 4	  |  read, write, execute permission for user (owner) of file
 5, 6, 7	  |  read, write, execute permission for group
 8, 9, 10	 |  read, write, execute permission for other (everyone)
+
+**Read** access would allow you to view a file
+**Write** access would allow you to modify a file (e.g. edit or delete)
+**Execute** access would allow 'execute' or run code (e.g. scripts) in a file.  For directorues it also allows you enter directory with 'cd' command  
 
 
 > ## How do you change permissions?
@@ -145,29 +147,13 @@ Position   |   Meaning
 > ~~~
 > {: .output}
 >
+> ***
 >
 > You'll see that permissions.txt becomes a private file only changable by the user who entered this command
 > 
 > Examples from another Supercomputing Centre - http://www.nersc.gov/users/storage-and-file-systems/unix-file-permissions/
 > 
 {: .callout}
-
-
- 
-## Sudo
-
-Add sudo info here
-
-## What is SSH?
-
-To make a remote login, we issue the command ssh username@computer (intro to supercomputing)
-
-~~~
-bash-3.2$ 
-bash-3.2$ ssh username@computer
-Password: ********
-~~~
-{: .language-bash}
 
 
 
@@ -183,5 +169,38 @@ Wget is a simple tool developed for the GNU Project that downloads files with th
 
 Further information on transferring files esp. within Pawsey 
 [Pawsey video on transferring files](https://youtu.be/3drzw-4aZTg)
+
+ 
+# Other useful information
+
+## SSH
+
+To make a remote login, we issue the command ssh username@computer (intro to supercomputing)
+
+~~~
+bash-3.2$ 
+bash-3.2$ ssh username@computer
+Password: ********
+~~~
+{: .language-bash}
+
+## Useful commands
+
+### Sudo
+
+'sudo' is a program that allows users to run programs with the security privilages of another user, usually 'superuser' with 'root' access.  Short for 'superuser do' or 'substitute user do'  
+
+This is useful for when you temporaryily want elevated privilages such as running a virtual machine.  See more at [Using Nimbus: Cloud computing at Pawsey] (https://pawseysc.github.io/using-nimbus/) 
+
+### Awk
+
+others?
+
+
+
+
+
+
+
 
 
