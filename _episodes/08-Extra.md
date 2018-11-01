@@ -149,9 +149,21 @@ Position   |   Meaning
 >
 > ***
 >
-> You'll see that permissions.txt becomes a private file only changable by the user who entered this command
+> You'll see that permissions.txt becomes a private file only changable by the user who entered this command.  
+> Finally lets try example about *chmod a-w* that use symbols rather than octals
+> ~~~
+> $ chmod a-w permissions.txt
+> $ ls -l
+> ~~~
+> {: .language-bash}
+>
 > 
-> Examples from another Supercomputing Centre - http://www.nersc.gov/users/storage-and-file-systems/unix-file-permissions/
+> ~~~
+> -r-------- 1 lukeedwards lukeedwards      6 Oct 31 06:20 permissions.txt
+> ~~~
+> {: .output}
+> 
+> Examples from another Supercomputing Centre - [NERSC unix permisssions](http://www.nersc.gov/users/storage-and-file-systems/unix-file-permissions/)
 > 
 {: .callout}
 
@@ -159,21 +171,21 @@ Position   |   Meaning
 
 # Transferring files
 
-## scp
+### scp
 
 To copy a file, we specify the source and destination paths, either of which may include computer names. If we leave out a computer name, scp assumes we mean the machine we’re running on.
 
-## Wget
+### Wget
 
 Wget is a simple tool developed for the GNU Project that downloads files with the HTTP, HTTPS and FTP protocols. It is widely used by Unix-like users and is available with most Linux distributions.
 
 Further information on transferring files esp. within Pawsey 
-[Pawsey video on transferring files](https://youtu.be/3drzw-4aZTg)
+[Transferring files within Pawsey](https://youtu.be/3drzw-4aZTg)
 
  
 # Other useful information
 
-## SSH
+### SSH
 
 If we want to run some commands on another machine, such as a Pawsey supercomputer or virtual machine? To do this, we have to first log into that machine. We call this a remote login.
 
@@ -193,8 +205,6 @@ Password: ********
 {: .language-bash}
 
 Mention SSH keys?
-
-## Useful commands
 
 ### Sudo
 
