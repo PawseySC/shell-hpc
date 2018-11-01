@@ -64,7 +64,7 @@ Position   |   Meaning
 > We use the *chmod* command.  The chmod command specifies read-write-execute permissions for the user, and 
 > read-execute permissions for group and other.
 >
-> It can be applied recusively to directories using the '-R' option.  Octal values or symbolic representations of the flags > can be used to change permissions
+> It can be applied recusively to directories using the '-R' option.  Octal values or symbolic representations of the flags can be used to change permissions
 >
 > ### Octal
 >
