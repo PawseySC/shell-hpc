@@ -64,6 +64,7 @@ We use the *chmod* command.  The chmod command specifies read-write-execute perm
 It can be applied recusively to directories using the '-R' option.  Octal values or symbolic representations of the flags can be used to change permissions
 
 # Octal
+
 Octal digit | Permission | Binary representation (rwx)
 --- | --- | ---
 7 | read, write and execute | 111
@@ -75,23 +76,22 @@ Octal digit | Permission | Binary representation (rwx)
 1 | execute only | 001
 0 | none | 000
 
-4 = read
-2 = write
-1 = execute
+4 = read | 2 = write | 1 = execute
 
 # Symbolic
-Reference | Class | Description
---- | --- | ---
-u | user | file's owner
-g | group | members of the file's group
-o | others | users who are niether file's owner or members of file's group
-a | all | all three of the above
 
-Operator | Description
---- | ---
-+ | adds the specified modes from specific classes
-- | removes the specified modes from the specified classes
-= | the modes specified are to be made the exact modes for the specified classes
+| Reference | Class | Description |
+| --- | --- | --- | 
+| u | user | file's owner |
+| g | group | members of the file's group |
+| o | others | users who are niether file's owner or members of file's group |
+| a | all | all three of the above |
+
+| Operator | Description |
+| --- | --- |
+| + | adds the specified modes from specific classes |
+| - | removes the specified modes from the specified classes |
+| = | the modes specified are to be made the exact modes for the specified classes |
 
 e.g. chmod a-w (remove write permissions for all classes (a), preventing anyone from writing to the file
 
