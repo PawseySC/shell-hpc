@@ -5,24 +5,24 @@ exercises: 5
 questions:
 - "What other useful things should I know?"
 objectives:
-- "TO DO."
-- "TO DO."
+- "To understand unix permissons."
+- "To understand how to move data around"
 keypoints:
-- "TO DO"
-- "TO DO"
+- "Use *ls -l* to view the permissions for a specific file."
+- "Use *chmod* to change permissions on a file or directory."
 keypoints:
-- "Use ls -l to view the permissions for a specific file."
-- "Use chmod to change permissions on a file or directory."
+- "Use *ls -l* to view the permissions for a specific file."
+- "Use *chmod* to change permissions on a file or directory."
 - "TO DO."
 ---
 ### Permissions
 Unix controls who can read, modify, and run files using concepts of *file ownership* and *permissions* to provide security at the file system level.  Using Pawsey systems will require knowledge of unix permissions.   
 
-Users can belong to any number of groups, each of which has a unique group name and numeric group ID. Now let’s look at files and directories. Every file and directory on a Unix computer belongs to one owner and one group. Along with each file’s content, the operating system stores the numeric IDs of the user and group that own it.
+Users can belong to any number of groups, each of which has a unique group name and numeric group ID.* Every file and directory on a Unix computer belongs to one owner and one group. Along with each file’s content, the operating system stores the numeric IDs of the user and group that own it.
 
-The user-and-group model means that for each file every user on the system falls into one of three categories: the owner of the file, someone in the file’s group, and everyone else.
+The user-and-group model means that for each file every user on the system falls into one of three categories: 1) the owner of the file, 2) someone in the file’s group, and 3) everyone else.
 
-The command "ls -l" displays the permissions and associated group for any file.
+To discover the permissions and associated group for any file / directory use the command "ls -l" 
 
 ~~~
 $ ls -l
@@ -35,7 +35,7 @@ drwxrwxr-x 7 lukeedwards lukeedwards   4096 Sep 15  2017 data-shell
 {: .output}
 
 
-The output above represent:
+The output above represents:
 
 1) set of ten permission flags
 2) link count (irrelevant to this topic)
@@ -61,6 +61,40 @@ Position   |   Meaning
 
 We use the *chmod* command.  The chmod command specifies read-write-execute permissions for the user, and read-execute permissions for group and other.
 
+It can be applied recusively to directories using the '-R' option.  Octal values or symbolic representations of the flags can be used to change permissions
+
+# Octal
+Octal digit | Permission | Binary representation (rwx)
+--- | --- | ---
+7 | read, write and execute | 111
+6 | read and write | 110
+5 | read and execute | 101
+4 | read only | 100 
+3 | write and execute | 011
+2 | write only | 010
+1 | execute only | 001
+0 | none | 000
+
+4 = read
+2 = write
+1 = execute
+
+# Symbolic
+Reference | Class | Description
+--- | --- | ---
+u | user | file's owner
+g | group | members of the file's group
+o | others | users who are niether file's owner or members of file's group
+a | all | all three of the above
+
+Operator | Description
+--- | ---
++ | adds the specified modes from specific classes
+- | removes the specified modes from the specified classes
+= | the modes specified are to be made the exact modes for the specified classes
+
+e.g. chmod a-w (remove write permissions for all classes (a), preventing anyone from writing to the file
+
 Let's create a file, say permissions.txt and experiment with changing permissions
 
 ~~~
@@ -75,7 +109,7 @@ $ ls -l
 ~~~
 {: .output}
 
-chmod 777 lets everybody do everythng to the file.  Let's try make it more restrictive with *chmod 755* 
+You can see applying *chmod 777* lets everybody do everythng to the file.  Let's try make it more restrictive with *chmod 755* 
 
 ~~~
 $ chmod 755 permissions.txt
