@@ -210,7 +210,7 @@ Mention SSH keys?
 
 'sudo' is a program that allows users to run programs with the security privilages of another user, usually 'superuser' with 'root' access.  Short for 'superuser do' or 'substitute user do'  
 
-This is useful for when you temporaryily want elevated privilages such as running a virtual machine.  See more at [Using Nimbus: Cloud computing at Pawsey](https://pawseysc.github.io/using-nimbus/) 
+This is useful for when you temporarily want elevated privilages such as running a virtual machine.  See more at [Using Nimbus: Cloud computing at Pawsey](https://pawseysc.github.io/using-nimbus/) 
 
 ### Awk
 
