@@ -15,14 +15,14 @@ keypoints:
 - "Use *chmod* to change permissions on a file or directory."
 - "TO DO."
 ---
-### Permissions
+# Permissions
 Unix controls who can read, modify, and run files using concepts of *file ownership* and *permissions* to provide security at the file system level.  Using Pawsey systems will require knowledge of unix permissions.   
 
 Users can belong to any number of groups, each of which has a unique group name and numeric group ID.* Every file and directory on a Unix computer belongs to one owner and one group. Along with each file’s content, the operating system stores the numeric IDs of the user and group that own it.
 
 The user-and-group model means that for each file every user on the system falls into one of three categories: 1) the owner of the file, 2) someone in the file’s group, and 3) everyone else.
 
-To discover the permissions and associated group for any file / directory use the command "ls -l" 
+To discover the permissions and associated group for any file / directory use the command 'ls -l' 
 
 ~~~
 $ ls -l
@@ -159,7 +159,7 @@ Password: ********
 
 
 
-### Transferring files
+# Transferring files
 
 ## scp
 
