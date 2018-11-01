@@ -93,7 +93,8 @@ Octal digit | Permission | Binary representation (rwx)
 | - | removes the specified modes from the specified classes |
 | = | the modes specified are to be made the exact modes for the specified classes |
 
-e.g. chmod a-w (remove write permissions for all classes (a), preventing anyone from writing to the file
+e.g. *chmod a-w* 
+remove write (w) permissions for all classes (a), preventing anyone from writing to the file
 
 Let's create a file, say permissions.txt and experiment with changing permissions
 
