@@ -54,9 +54,9 @@ Position   |   Meaning
 5, 6, 7	  |  read, write, execute permission for group
 8, 9, 10	 |  read, write, execute permission for other (everyone)
 
-**Read** access would allow you to view a file
-**Write** access would allow you to modify a file (e.g. edit or delete)
-**Execute** access would allow 'execute' or run code (e.g. scripts) in a file.  For directorues it also allows you enter directory with 'cd' command  
+* **Read** access would allow you to view a file
+- **Write** access would allow you to modify a file (e.g. edit or delete)
++ **Execute** access would allow 'execute' or run code (e.g. scripts) in a file.  For directorues it also allows you enter directory with 'cd' command  
 
 
 > ## How do you change permissions?
@@ -150,7 +150,7 @@ Position   |   Meaning
 > ***
 >
 > You'll see that permissions.txt becomes a private file only changable by the user who entered this command.  
-> Finally lets try example about *chmod a-w* that use symbols rather than octals
+> Finally let's try the example  *chmod a-w* that uses symbols rather than octals
 > ~~~
 > $ chmod a-w permissions.txt
 > $ ls -l
@@ -217,9 +217,14 @@ This is useful for when you temporaryily want elevated privilages such as runnin
 others?
 
 
+The awk command is a powerful method for processing or analyzing text files—in particular, data files that are organized by lines (rows) and columns. 
 
 
-
+The basic format of an awk command looks like this:
+~~~
+awk 'pattern {action}' input-file > output-file
+~~~
+{: .language-bash}
 
 
 
