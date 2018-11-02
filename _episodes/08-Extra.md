@@ -54,9 +54,9 @@ Position   |   Meaning
 5, 6, 7	  |  read, write, execute permission for group
 8, 9, 10	 |  read, write, execute permission for other (everyone)
 
-* **Read** access would allow you to view a file
-- **Write** access would allow you to modify a file (e.g. edit or delete)
-+ **Execute** access would allow 'execute' or run code (e.g. scripts) in a file.  For directorues it also allows you enter directory with 'cd' command  
+* **Read** access would allow you to open and view a file.  Users can view contents of a directory and list (ls) contents of directory
+- **Write** access would allow you to modify a file (e.g. edit, rename or delete)
++ **Execute** access would allow 'execute' a file.  Relevant for files that are scripts etc.  For directorues it also allows you enter directory with 'cd' command  
 
 
 > ## How do you change permissions?
@@ -163,7 +163,7 @@ Position   |   Meaning
 > ~~~
 > {: .output}
 > 
-> Examples from another Supercomputing Centre - [NERSC unix permisssions](http://www.nersc.gov/users/storage-and-file-systems/unix-file-permissions/)
+> Pawsey specific information on file permission can be found [here](https://support.pawsey.org.au/documentation/display/US/File+Permissions)
 > 
 {: .callout}
 
@@ -173,7 +173,14 @@ Position   |   Meaning
 
 ### scp
 
-To copy a file, we specify the source and destination paths, either of which may include computer names. If we leave out a computer name, scp assumes we mean the machine we’re running on.
+To copy a file, we specify the source and destination paths, either of which may include computer names. If we leave out a computer name, scp assumes we mean the machine we’re running on.  Syntax is the following
+
+~~~
+scp [options] username1@source_host:directory1/filename1 username2@destination_host:directory2/filename2
+~~~
+
+To copy a directory (and all the files it contains), use scp with the -r option. This tells scp to recursively copy the source directory and its contents.  You can also use wildcards (* or ?) as discussed earlier.
+
 
 ### Wget
 
@@ -204,7 +211,8 @@ Password: ********
 ~~~
 {: .language-bash}
 
-Mention SSH keys?
+SSH keys allow for a secure method of logging in to a server without the need of typing a password each time a connection is established.  This method has many advantages and is the only method to login to your Virtual Machine (VM) on Pawsey's Cloud Service - Nimbus.  Details on creating keypairs for Nimbus are [here](https://pawseysc.github.io/using-nimbus/04-making-keypairs/index.html)
+
 
 ### Sudo
 
@@ -212,13 +220,10 @@ Mention SSH keys?
 
 This is useful for when you temporarily want elevated privilages such as running a virtual machine.  See more at [Using Nimbus: Cloud computing at Pawsey](https://pawseysc.github.io/using-nimbus/) 
 
+
 ### Awk
 
-others?
-
-
 The awk command is a powerful method for processing or analyzing text files—in particular, data files that are organized by lines (rows) and columns. 
-
 
 The basic format of an awk command looks like this:
 ~~~
