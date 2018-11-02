@@ -13,7 +13,6 @@ keypoints:
 keypoints:
 - "Use *ls -l* to view the permissions for a specific file."
 - "Use *chmod* to change permissions on a file or directory."
-- "TO DO."
 ---
 # Permissions
 Unix controls who can read, modify, and run files using concepts of *file ownership* and *permissions* to provide security at the file system level.  Using Pawsey systems will require knowledge of unix permissions.   
@@ -172,8 +171,7 @@ Position   |   Meaning
 # Transferring files
 
 ### scp
-
-To copy a file, we specify the source and destination paths, either of which may include computer names. If we leave out a computer name, scp assumes we mean the machine we’re running on.  Syntax is the following
+To copy a file, we specify the source and destination paths, either of which may include computer names. If we leave out a computer name, scp assumes we mean the machine we’re running on.  Syntax is the following:
 
 ~~~
 scp [options] username1@source_host:directory1/filename1 username2@destination_host:directory2/filename2
@@ -183,10 +181,10 @@ To copy a directory (and all the files it contains), use scp with the -r option.
 
 
 ### Wget
+Wget is a simple tool developed for the GNU Project that downloads files with the HTTP, HTTPS and FTP protocols. It is widely used by Unix-like users and is available with most Linux distributions.  Useful for automated download of large amounts of data and is supported by [Pawsey Data Portal](https://data.pawsey.org.au/)
 
-Wget is a simple tool developed for the GNU Project that downloads files with the HTTP, HTTPS and FTP protocols. It is widely used by Unix-like users and is available with most Linux distributions.
 
-Further information on transferring files esp. within Pawsey 
+Further information on transferring files esp. within Pawsey can be found here:
 [Transferring files within Pawsey](https://youtu.be/3drzw-4aZTg)
 
  
@@ -215,14 +213,12 @@ SSH keys allow for a secure method of logging in to a server without the need of
 
 
 ### Sudo
-
 'sudo' is a program that allows users to run programs with the security privilages of another user, usually 'superuser' with 'root' access.  Short for 'superuser do' or 'substitute user do'  
 
-This is useful for when you temporarily want elevated privilages such as running a virtual machine.  See more at [Using Nimbus: Cloud computing at Pawsey](https://pawseysc.github.io/using-nimbus/) 
+This is useful for when you temporarily want elevated privilages, which is common when using a Nimbus Virtual Machine.  See more at [Using Nimbus: Cloud computing at Pawsey](https://pawseysc.github.io/using-nimbus/) 
 
 
 ### Awk
-
 The awk command is a powerful method for processing or analyzing text files—in particular, data files that are organized by lines (rows) and columns. 
 
 The basic format of an awk command looks like this:
