@@ -7,6 +7,7 @@ questions:
 objectives:
 - "To understand unix permissons."
 - "To understand how to move data around"
+- "To understand other useful unix commands"
 keypoints:
 - "Use *ls -l* to view the permissions for a specific file."
 - "Use *chmod* to change permissions on a file or directory."
