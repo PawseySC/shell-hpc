@@ -10,9 +10,12 @@ objectives:
 keypoints:
 - "Use *ls -l* to view the permissions for a specific file."
 - "Use *chmod* to change permissions on a file or directory."
+- "SSH is a secure way to login to a remote computer, such as a Pawsey supercomputer"
 keypoints:
 - "Use *ls -l* to view the permissions for a specific file."
 - "Use *chmod* to change permissions on a file or directory."
+- "SSH is a secure way to login to a remote computer, such as a Pawsey supercomputer"
+
 ---
 # Permissions
 Unix controls who can read, modify, and run files using concepts of *file ownership* and *permissions* to provide security at the file system level.  Using Pawsey systems will require knowledge of unix permissions.   
@@ -162,6 +165,7 @@ Position   |   Meaning
 > ~~~
 > {: .output}
 > 
+>---
 > Pawsey specific information on file permission can be found [here](https://support.pawsey.org.au/documentation/display/US/File+Permissions)
 > 
 {: .callout}
@@ -184,11 +188,9 @@ To copy a directory (and all the files it contains), use scp with the -r option.
 Wget is a simple tool developed for the GNU Project that downloads files with the HTTP, HTTPS and FTP protocols. It is widely used by Unix-like users and is available with most Linux distributions.  Useful for automated download of large amounts of data and is supported by [Pawsey Data Portal](https://data.pawsey.org.au/)
 
 ---
-
-~~~
 Further information on transferring files especially within Pawsey can be found here:
 [Transferring files within Pawsey](https://youtu.be/3drzw-4aZTg)
-~~~
+
  
 # Other useful information
 
