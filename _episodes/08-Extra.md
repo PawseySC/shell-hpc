@@ -192,6 +192,7 @@ Wget is a simple tool developed for the GNU Project that downloads files with th
 Further information on transferring files especially within Pawsey can be found here:
 [Transferring files within Pawsey](https://youtu.be/3drzw-4aZTg)
 
+---
  
 # Other useful information
 
@@ -223,6 +224,7 @@ SSH keys allow for a secure method of logging in to a server without the need of
 
 This is useful for when you temporarily want elevated privilages, which is common when using a Nimbus Virtual Machine.  See more at [Using Nimbus: Cloud computing at Pawsey](https://pawseysc.github.io/using-nimbus/) 
 
+---
 
 ### Awk
 Previously in the 'Pipes and Filters' episode, basic text processing commands were introduced.  The 'awk' command (short for 
