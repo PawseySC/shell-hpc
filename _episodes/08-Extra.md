@@ -183,43 +183,47 @@ To copy a directory (and all the files it contains), use scp with the -r option.
 ### Wget
 Wget is a simple tool developed for the GNU Project that downloads files with the HTTP, HTTPS and FTP protocols. It is widely used by Unix-like users and is available with most Linux distributions.  Useful for automated download of large amounts of data and is supported by [Pawsey Data Portal](https://data.pawsey.org.au/)
 
+---
 
-Further information on transferring files esp. within Pawsey can be found here:
+~~~
+Further information on transferring files especially within Pawsey can be found here:
 [Transferring files within Pawsey](https://youtu.be/3drzw-4aZTg)
-
+~~~
  
 # Other useful information
 
 ### SSH
 
-If we want to run some commands on another machine, such as a Pawsey supercomputer or virtual machine? To do this, we have to first log into that machine. We call this a remote login.
+If we want to run some commands on another machine, such as a Pawsey supercomputer or virtual machine, we have to first log into that machine. We call this a 'remote login'.
 
 In order for us to be able to login, the remote computer must be runing a remote login server and we will run a client program that can talk to that server. The client program passes our login credentials to the remote login server and, if we are allowed to login, that server then runs a shell for us on the remote computer.
 
-Once our local client is connected to the remote server, everything we type into the client is passed on, by the server, to the shell running on the remote computer. That remote shell runs those commands on our behalf, just as a local shell would.
+Once our local client is connected to the remote server, everything we type into the client is passed on, by the server, to the shell running on the remote computer. That remote shell runs those commands on our behalf..
 
-To make a remote login, we issue use the followeing syntax 'ssh username@remote_host' 
+To make a remote login, we issue the following syntax 'ssh username@remote_host' 
 
 The remote host is the IP address or domain name that you are trying to connect to 
 
 ~~~
 bash-3.2$ 
-bash-3.2$ ssh bob@magnus.pawsey.org.au
+bash-3.2$ ssh username@magnus.pawsey.org.au
 Password: ********
 ~~~
 {: .language-bash}
 
-SSH keys allow for a secure method of logging in to a server without the need of typing a password each time a connection is established.  This method has many advantages and is the only method to login to your Virtual Machine (VM) on Pawsey's Cloud Service - Nimbus.  Details on creating keypairs for Nimbus are [here](https://pawseysc.github.io/using-nimbus/04-making-keypairs/index.html)
+SSH keys allow for a secure method of logging in to a server without the need of typing a password each time a connection is established.  This method has many advantages and is the only method to login to your Virtual Machine (VM) on Pawsey's Cloud Service - Nimbus.  Details on creating keypairs for Nimbus are here: [Making keypairs](https://pawseysc.github.io/using-nimbus/04-making-keypairs/index.html)
 
 
 ### Sudo
-'sudo' is a program that allows users to run programs with the security privilages of another user, usually 'superuser' with 'root' access.  Short for 'superuser do' or 'substitute user do'  
+'sudo' is a program that allows users to run programs with the security privilages of another user, usually 'superuser' with 'root' access.  Short for '**su**peruser **do**' or '**su**bstitute user **do**'  
+
 
 This is useful for when you temporarily want elevated privilages, which is common when using a Nimbus Virtual Machine.  See more at [Using Nimbus: Cloud computing at Pawsey](https://pawseysc.github.io/using-nimbus/) 
 
 
 ### Awk
-The awk command is a powerful method for processing or analyzing text files—in particular, data files that are organized by lines (rows) and columns. 
+Previously in the 'Pipes and Filters' episode, basic text processing commands were introduced.  The 'awk' command (short for 
+**A**ho, **W**einberger, and **K**ernighan) is a more powerful method for processing or analyzing text files, in particular, data files that are organized by lines (rows) and columns.  
 
 The basic format of an awk command looks like this:
 ~~~
@@ -227,6 +231,6 @@ awk 'pattern {action}' input-file > output-file
 ~~~
 {: .language-bash}
 
-
+It is an interpreted programming language which focuses on processing text and is a direct predecessor of [Perl](https://en.wikipedia.org/wiki/Perl)
 
 
