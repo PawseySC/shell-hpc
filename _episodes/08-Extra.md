@@ -184,6 +184,7 @@ scp [options] username1@source_host:directory1/filename1 username2@destination_h
 
 To copy a directory (and all the files it contains), use scp with the -r option. This tells scp to recursively copy the source directory and its contents.  You can also use wildcards (* or ?) as discussed earlier.
 
+---
 
 ### Wget
 Wget is a simple tool developed for the GNU Project that downloads files with the HTTP, HTTPS and FTP protocols. It is widely used by Unix-like users and is available with most Linux distributions.  Useful for automated download of large amounts of data and is supported by [Pawsey Data Portal](https://data.pawsey.org.au/)
@@ -217,6 +218,7 @@ Password: ********
 
 SSH keys allow for a secure method of logging in to a server without the need of typing a password each time a connection is established.  This method has many advantages and is the only method to login to your Virtual Machine (VM) on Pawsey's Cloud Service - Nimbus.  Details on creating keypairs for Nimbus are here: [Making keypairs](https://pawseysc.github.io/using-nimbus/04-making-keypairs/index.html)
 
+---
 
 ### Sudo
 'sudo' is a program that allows users to run programs with the security privilages of another user, usually 'superuser' with 'root' access.  Short for '**su**peruser **do**' or '**su**bstitute user **do**'  
@@ -238,4 +240,4 @@ awk 'pattern {action}' input-file > output-file
 
 It is an interpreted programming language which focuses on processing text and is a direct predecessor of [Perl](https://en.wikipedia.org/wiki/Perl)
 
-
+---
