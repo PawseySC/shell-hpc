@@ -175,8 +175,8 @@ Position   |   Meaning
 
 # Transferring files
 
-### scp
-To copy a file, we specify the source and destination paths, either of which may include computer names. If we leave out a computer name, scp assumes we mean the machine we’re running on.  Syntax is the following:
+### SCP
+Secure copy protocol (SCP) is a means of securely transferring files between a local host and remote host (or two remote hosts).  To copy a file, we specify the source and destination paths, either of which may include computer names. If we leave out a computer name, scp assumes we mean the machine we’re running on.  Syntax is the following:
 
 ~~~
 scp [options] username1@source_host:directory1/filename1 username2@destination_host:directory2/filename2
