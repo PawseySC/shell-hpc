@@ -167,8 +167,11 @@ Position   |   Meaning
 > {: .output}
 > 
 >---
-> You can see it removes 'write' permission.  To move data via the command line to Pawsey Data Portal a script/binary called 'pshell' is used.  One step is to ensure user has execute permissions.  This is done via 'chmod u+x pshell' [Using pshell](https://support.pawsey.org.au/documentation/display/US/Using+the+command+line+interface+-+pshell).  To learn more about 
-Pawsey specific information on file permission click [here](https://support.pawsey.org.au/documentation/display/US/File+Permissions)
+> You can see it removes 'write' permission.  
+>---
+> **Pawsey example**To move data via the command line a python command line client called *pshell* is used.  The first step is to ensure the user has *execute* permission.  This is done via *chmod u+x pshell* - see more [How to use pshell](https://support.pawsey.org.au/documentation/display/US/Using+the+command+line+interface+-+pshell).  
+>
+>To learn more about Pawsey specific information on file permission click [here](https://support.pawsey.org.au/documentation/display/US/File+Permissions)
 > 
 {: .callout}
 
