@@ -153,7 +153,9 @@ being able to interact with the shell is becoming a necessary skill.
 We can build on the command-line skills covered here
 to tackle a wide range of scientific questions and computational challenges.
 
-## Nelle's Pipeline: Example used in material
+~~~
+
+### Nelle's Pipeline: Example used in material
 
 Nelle Nemo, a marine biologist,
 has just returned from a six-month survey of the
@@ -198,3 +200,4 @@ As a bonus,
 once she has put a processing pipeline together,
 she will be able to use it again whenever she collects more data.
 
+~~~
