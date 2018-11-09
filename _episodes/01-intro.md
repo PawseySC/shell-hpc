@@ -91,11 +91,13 @@ later today. Those with a Mac might recognize the output in this example.
 Finally, the shell again prints the prompt and waits for you to type the next 
 command.
 
-~~~
+---
+
 Open a shell window and try entering `ls -F /` for yourself (don't forget that spaces
 and capitalization are important!). 
-~~~
-{: .language-bash}
+
+---
+
 
 
 ### How does the shell know what `ls` and its flags mean?
