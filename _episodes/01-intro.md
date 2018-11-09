@@ -167,12 +167,12 @@ She has 1520 samples in all and now needs to:*
 *1.  Run each sample through an assay machine
     that will measure the relative abundance of 300 different proteins.
     The machine's output for a single sample is
-    a file with one line for each protein.
-2.  Calculate statistics for each of the proteins separately
-    using a program her supervisor wrote called `goostats`.
-3.  Write up results.
+    a file with one line for each protein.*
+*2.  Calculate statistics for each of the proteins separately
+    using a program her supervisor wrote called `goostats`.*
+*3.  Write up results.
     Her supervisor would really like her to do this by the end of the month
-    so that her paper can appear in an upcoming special issue of *Aquatic Goo Letters*.*
+    so that her paper can appear in an upcoming special issue of 'Aquatic Goo Letters'.*
 
 *It takes about half an hour for the assay machine to process each sample.
 The good news is that
