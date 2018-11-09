@@ -157,14 +157,14 @@ to tackle a wide range of scientific questions and computational challenges.
 
 ### Nelle's Pipeline: Example used in material
 
-Nelle Nemo, a marine biologist,
+*Nelle Nemo, a marine biologist,
 has just returned from a six-month survey of the
 [North Pacific Gyre](http://en.wikipedia.org/wiki/North_Pacific_Gyre),
 where she has been sampling gelatinous marine life in the
 [Great Pacific Garbage Patch](http://en.wikipedia.org/wiki/Great_Pacific_Garbage_Patch).
-She has 1520 samples in all and now needs to:
+She has 1520 samples in all and now needs to:*
 
-1.  Run each sample through an assay machine
+*1.  Run each sample through an assay machine
     that will measure the relative abundance of 300 different proteins.
     The machine's output for a single sample is
     a file with one line for each protein.
@@ -174,13 +174,13 @@ She has 1520 samples in all and now needs to:
     Her supervisor would really like her to do this by the end of the month
     so that her paper can appear in an upcoming special issue of *Aquatic Goo Letters*.
 
-It takes about half an hour for the assay machine to process each sample.
+*It takes about half an hour for the assay machine to process each sample.
 The good news is that
 it only takes two minutes to set each one up.
 Since her lab has eight assay machines that she can use in parallel,
 this step will "only" take about two weeks.
 
-The bad news is that if she has to run `goostats` by hand,
+*The bad news is that if she has to run `goostats` by hand,
 she'll have to enter filenames and click "OK" 1520 times.
 At 30 seconds per sample,
 the whole process will take more than 12 hours
@@ -191,7 +191,7 @@ likely take much longer than 12 hours, not to mention that
 the chances of her typing all of those commands correctly are practically zero.
 Missing that paper deadline is looking increasingly likely.
 
-The next few lessons will explore what she should do instead.
+*The next few lessons will explore what she should do instead.
 More specifically,
 they explain how she can use a command shell
 to automate the repetitive steps in her processing pipeline
