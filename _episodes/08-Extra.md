@@ -40,13 +40,13 @@ drwxrwxr-x 7 lukeedwards lukeedwards   4096 Sep 15  2017 data-shell
 
 The output above represents:
 
-1) set of ten permission flags
-2) link count (irrelevant to this topic)
-3) owner
-4) associated group
-5) size
-6) date of last modification
-7) name of file
+* 1) set of ten permission flags
+* 2) link count (irrelevant to this topic)
+* 3) owner
+* 4) associated group
+* 5) size
+* 6) date of last modification
+* 7) name of file
 
 For the ten permission flags (drwxrwxr-x)
 
