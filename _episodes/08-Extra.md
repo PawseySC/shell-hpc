@@ -59,7 +59,7 @@ Position   |   Meaning
 
 * **Read** access would allow you to open and view a file.  Users can view contents of a directory and list (ls) contents of directory
 - **Write** access would allow you to modify a file (e.g. edit, rename or delete)
-+ **Execute** access would allow 'execute' a file.  Relevant for files that are scripts etc.  For directorues it also allows you enter directory with 'cd' command  
++ **Execute** access would allow 'execute' a file.  Relevant for files that are scripts etc.  For directories, it also allows you enter directory with 'cd' command  
 
 
 > ## How do you change permissions?
