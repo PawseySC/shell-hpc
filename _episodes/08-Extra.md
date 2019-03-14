@@ -18,7 +18,7 @@ keypoints:
 - "SSH is a secure way to login to a remote computer, such as a Pawsey supercomputer"
 
 ---
-# Permissions
+# File permissions
 Unix controls who can read, modify, and run files using concepts of *file ownership* and *permissions* to provide security at the file system level.  Using Pawsey systems will require knowledge of unix permissions.   
 
 Users can belong to any number of groups, each of which has a unique group name and numeric group ID.* Every file and directory on a Unix computer belongs to one owner and one group. Along with each file’s content, the operating system stores the numeric IDs of the user and group that own it.
