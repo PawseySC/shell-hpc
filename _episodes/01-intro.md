@@ -142,7 +142,9 @@ presents you with choices and you select one. With a CLI the choices are combina
 of commands and parameters, more like words in a language than buttons on a screen. They
 are not presented to you so
 you must learn a few, like learning some vocabulary in a new language. But a small 
-number of commands gets you a long way, and we'll cover those essential few today.
+number of commands gets you a long way.  Most people need to Google / look up documentation unix commands and don't know off the top of their head
+
+[https://xkcd.com/1168/](https://imgs.xkcd.com/comics/tar.png)
 
 ### Flexibility and automation 
 
