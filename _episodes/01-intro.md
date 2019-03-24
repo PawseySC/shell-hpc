@@ -144,6 +144,8 @@ are not presented to you so
 you must learn a few, like learning some vocabulary in a new language. But a small 
 number of commands gets you a long way.  Most people need to Google / look up documentation unix commands and don't know off the top of their head
 
+![XKCD](../fig/tar_2x.png)
+
 [https://xkcd.com/1168/](https://imgs.xkcd.com/comics/tar.png)
 
 ### Flexibility and automation 
