@@ -396,7 +396,7 @@ Sure enough,
 `ls` shows us that `thesis` now contains one file called `quotes.txt`:
 
 ~~~
-$ ls thesis
+$ ls
 ~~~
 {: .language-bash}
 
