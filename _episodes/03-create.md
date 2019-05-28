@@ -271,7 +271,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-//home/username/data-shell/thesis
+/home/username/data-shell/thesis
 ~~~
 {: .output}
 
