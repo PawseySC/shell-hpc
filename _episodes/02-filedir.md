@@ -163,9 +163,8 @@ to use a command and what flags it accepts:
 If you use a Mac, or Git for Windows, you might find that only one of these works 
 (probably `man` on Mac and `--help` in Windows). We'll describe both ways.
 
-Of course there is a third way: searching the internet via your web browser. 
-When using internet search, including the phrase `unix man page` in your search
-query will help to find relevant results.
+3. There is a third way: searching the internet via your web browser or better yet use
+[TLDR pages website](https://tldr.ostera.io/).  TLDR pages are a community effort to simplify man pages with practical examples.
 
 > ## Manual pages on the web
 >
