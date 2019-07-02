@@ -169,9 +169,8 @@ If you use a Mac, or Git for Windows, you might find that only one of these work
 > ## Manual pages on the web
 >
 > GNU provides links to its
-> [manuals](http://www.gnu.org/manual/manual.html) including the
-> [core GNU utilities](http://www.gnu.org/software/coreutils/manual/coreutils.html),
-> which covers many commands introduced within this lesson.
+> [manuals](http://www.gnu.org/manual/manual.html) but [TLDR pages website](https://tldr.ostera.io/)
+> provides a simple way to search man pages
 {: .callout}
 
 #### The `--help` flag
