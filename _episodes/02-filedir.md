@@ -161,12 +161,12 @@ to use a command and what flags it accepts:
     {: .bash}
 
 If you use a Mac, or Git for Windows, you might find that only one of these works 
-(probably `man` on Mac and `--help` in Windows). We'll describe both ways.
+(probably `man` on Mac and `--help` in Windows). 
 
-3. There is a third way: searching the internet via your web browser or better yet use
+There is a third way: searching the internet via your web browser or better yet use
 [TLDR pages website](https://tldr.ostera.io/).  TLDR pages are a community effort to simplify man pages with practical examples.
 
-> ## Manual pages on the web
+> ## TLDR
 >
 > GNU provides links to its
 > [manuals](http://www.gnu.org/manual/manual.html) but [TLDR pages website](https://tldr.ostera.io/)
