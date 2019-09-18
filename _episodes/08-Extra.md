@@ -235,7 +235,10 @@ This is useful for when you temporarily want elevated privilages, which is commo
 ### Data science
 Often 'data science' makes use of text files and text-based Comma Separated Values (CSV) files.  Unix commands that we have learnt in the training (wc, head, tail, cat, grep, uniq) can be used to modify and process large files that you couldn't do in popular software packages
 
-Here is a [link](https://www.datacamp.com/community/tutorials/shell-commands-data-scientist) to how to use 8 common Unix commands in Data Science 
+Here is a [link](https://www.datacamp.com/community/tutorials/shell-commands-data-scientist) to how to use 8 common Unix commands in Data Science.
+
+Data used is from [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php).  Contains many useful datasets to experiment with.
+
 
 ---
 
