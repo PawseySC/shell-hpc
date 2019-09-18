@@ -232,6 +232,13 @@ This is useful for when you temporarily want elevated privilages, which is commo
 
 ---
 
+### Data science
+Often 'data science' makes use of text files and text-based Comma Separated Values (CSV) files.  Unix commands that we have learnt in the training (wc, head, tail, cat, grep, uniq) can be used to modify and process large files that you couldn't do in popular software packages
+
+Here is a [link](https://www.datacamp.com/community/tutorials/shell-commands-data-scientist) to how to use 8 common Unix commands in Data Science 
+
+---
+
 ### Awk
 Previously in the 'Pipes and Filters' episode, basic text processing commands were introduced.  The 'awk' command (short for 
 **A**ho, **W**einberger, and **K**ernighan) is a more powerful method for processing or analyzing text files, in particular, data files that are organized by lines (rows) and columns.  
