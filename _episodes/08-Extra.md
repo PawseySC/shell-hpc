@@ -239,6 +239,8 @@ Here is a [link](https://www.datacamp.com/community/tutorials/shell-commands-dat
 
 Data used is from [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php).  Specifically [http://archive.ics.uci.edu/ml/datasets/Adult](http://archive.ics.uci.edu/ml/datasets/Adult).  The repository contains many useful datasets to experiment with.
 
+Citation: Dua, D. and Graff, C. (2019). UCI Machine Learning Repository [http://archive.ics.uci.edu/ml]. Irvine, CA: University of California, School of Information and Computer Science.
+
 
 ---
 
