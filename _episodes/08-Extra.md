@@ -237,7 +237,7 @@ Often 'data science' makes use of text files and text-based Comma Separated Valu
 
 Here is a [link](https://www.datacamp.com/community/tutorials/shell-commands-data-scientist) to how to use 8 common Unix commands in Data Science.
 
-Data used is from [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php).  Contains many useful datasets to experiment with.
+Data used is from [UC Irvine Machine Learning Repository](http://archive.ics.uci.edu/ml/index.php).  Specifically [http://archive.ics.uci.edu/ml/datasets/Adult](http://archive.ics.uci.edu/ml/datasets/Adult).  The repository contains many useful datasets to experiment with.
 
 
 ---
