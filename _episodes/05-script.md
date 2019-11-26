@@ -18,13 +18,7 @@ keypoints:
 - "Letting users decide what files to process is more flexible and more consistent with built-in Unix commands."
 ---
 
-We are finally ready to see what makes the shell such a powerful programming environment.
-We are going to take the commands we repeat frequently and save them in files
-so that we can re-run all those operations again later by typing a single command.
-For historical reasons,
-a bunch of commands saved in a file is usually called a **shell script**,
-but make no mistake:
-these are actually small programs.
+We are now ready to see what makes the shell such a powerful programming environment.  We are going to take the commands we repeat frequently and save them in files so that we can re-run all those operations again later by typing a single command.  For technical reasons, a bunch of commands saved in a file is usually called a **shell script**, but make no mistake:  These are actually small programs.
 
 Let's start by going back to `molecules/` and creating a new file, `middle.sh` which will
 become our shell script:
@@ -45,10 +39,10 @@ head -n 15 octane.pdb | tail -n 5
 ~~~
 {: .source}
 
-This is a variation on the pipe we constructed earlier:
-it selects lines 11-15 of the file `octane.pdb`.
+This is a variation on the pipeline we constructed earlier:
+It selects lines 11-15 of the file `octane.pdb`.
 Remember, we are *not* running it as a command just yet:
-we are putting the commands in a file.
+We are putting the commands in a file.
 
 Then we save the file (`Ctrl-O` in nano),
  and exit the text editor (`Ctrl-X` in nano).
@@ -77,13 +71,13 @@ our script's output is exactly what we would get if we ran that pipeline directl
 
 > ## Text vs. Whatever
 >
-> We usually call programs like Microsoft Word or LibreOffice Writer "text
+> We sometimes call programs like Microsoft Word or LibreOffice Writer "text
 > editors", but we need to be a bit more careful when it comes to
 > programming. By default, Microsoft Word uses `.docx` files to store not
 > only text, but also formatting information about fonts, headings, and so
 > on. This extra information isn't stored as characters, and doesn't mean
-> anything to tools like `head`: they expect input files to contain
-> nothing but the letters, digits, and punctuation on a standard computer
+> anything to tools like `head`:  They expect input files to contain
+> nothing but the letters, digits and punctuation on a standard computer
 > keyboard. When editing programs, therefore, you must either use a plain
 > text editor, or be careful to save files as plain text.
 {: .callout}
