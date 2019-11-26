@@ -85,7 +85,7 @@ between `ls` and `-F` the shell will look for a command called `ls-F`, which
 doesn't exist. Also, capitalization matters: `LS` is different to `ls`.
 
 Next we see the output that our command produced. In this case it is a listing
-of files and folders in a location called `/` - we'll cover what all these mean
+of files and directories in a location called `/` - we'll cover what all these mean
 later today. Those with a Mac might recognize the output in this example.
 
 Finally, the shell again prints the prompt and waits for you to type the next

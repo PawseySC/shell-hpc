@@ -540,7 +540,7 @@ so that you and other people can put those programs into pipes to multiply their
 
 > ## Pipe Reading Comprehension
 >
-> A file called `animals.txt` (in the `data-shell/data` folder) contains the following data:
+> A file called `animals.txt` (in the `data-shell/data` directory) contains the following data:
 >
 > ~~~
 > 2012-11-05,deer
