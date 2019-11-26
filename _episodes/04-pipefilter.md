@@ -113,7 +113,7 @@ $ wc *.pdb
 > > ## Solution
 >>  The solution is `3.`
 >>
->> `1.` shows all files that contain any number and combination of characters, followed by the letter `t`, another single character, and end with `ane.pdb`. This includes `octane.pdb` and `pentane.pdb`. 
+>> `1.` shows all files that contain any number and combination of characters, followed by the letter `t`, another single character, and end with `ane.pdb`. This includes `octane.pdb` and `pentane.pdb`.
 >>
 >> `2.` shows all files containing any number and combination of characters, `t`, another single character, `ne.` followed by any number and combination of characters. This will give us `octane.pdb` and `pentane.pdb` but doesn't match anything which ends in `thane.pdb`.
 >>
@@ -212,7 +212,7 @@ lengths.txt
 > 4. The second and third lines of `animals.txt`
 >
 > > ## Solution
-> > Option 3 is correct. 
+> > Option 3 is correct.
 > > For option 1 to be correct we would only run the `head` command.
 > > For option 2 to be correct we would only run the `tail` command.
 > > For option 4 to be correct we would have to pipe the output of `head` into `tail -2` by doing `head -3 animals.txt | tail -2 >> animalsUpd.txt`
@@ -448,8 +448,8 @@ most Unix programmers call it "stdin").
 Every process also has a default output channel called **standard output**
 (or "stdout"). A second output channel called **standard error** (stderr) also
 exists. This channel is typically used for error or diagnostic messages, and it
-allows a user to pipe the output of one program into another while still receiving 
-error messages in the terminal. 
+allows a user to pipe the output of one program into another while still receiving
+error messages in the terminal.
 
 The shell is actually just another program.
 Under normal circumstances,
@@ -485,7 +485,7 @@ This simple idea is why Unix has been so successful.
 Instead of creating enormous programs that try to do many different things,
 Unix programmers focus on creating lots of simple tools that each do one job well,
 and that work well with each other.
-This programming model is called "pipes and filters".
+This programming model is called **pipes and filters**.
 We've already seen pipes;
 a **filter** is a program like `wc` or `sort`
 that transforms a stream of input into a stream of output.
@@ -571,7 +571,7 @@ so that you and other people can put those programs into pipes to multiply their
 > $ cut -d , -f 2 animals.txt
 > ~~~
 > {: .language-bash}
-> 
+>
 > uses the -d flag to separate each line by comma, and the -f flag
 > to print the second field in each line, to give the following output:
 >

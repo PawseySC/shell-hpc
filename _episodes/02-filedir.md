@@ -10,7 +10,6 @@ objectives:
 - "Explain the similarities and differences between a file and a directory."
 - "Translate an absolute path into a relative path and vice versa."
 - "Construct absolute and relative paths that identify specific files and directories."
-- "Demonstrate the use of tab completion, and explain its advantages."
 keypoints:
 - "The file system is responsible for managing information on the disk."
 - "Information is stored in files, which are stored in directories (folders)."
@@ -23,14 +22,13 @@ keypoints:
 - "An absolute path specifies a location from the root of the file system."
 - "Directory names in a path are separated with `/` on Unix, but `\\` on Windows."
 - "`..` means 'the directory above the current one'; `.` on its own means 'the current directory'."
-- "Most files' names are `something.extension`. The extension isn't required, and doesn't guarantee anything, but is normally used to indicate the type of data in the file."
 ---
 
-The part of the operating system responsible for managing files and directories 
+The part of the operating system responsible for managing files and directories
 is called the **file system**.
 It organizes our data into files,
 which hold information,
-and directories (also called "folders"),
+and directories (sometimes called "folders"),
 which hold files or other directories.
 
 Several commands are frequently used to create, inspect, rename, and delete files and directories.
@@ -39,7 +37,7 @@ To start exploring them, we'll go to our open shell window:
 First let's find out where we are by running a command called `pwd`
 (which stands for "print working directory"). Directories are like *places* - at any time
 while we are using the shell we are in exactly one place, called
-our **current working directory**. Commands mostly read and write files in the 
+our **current working directory**. Commands mostly read and write files in the
 current working directory, i.e. "here", so knowing where you are before running
 a command is important. `pwd` shows you where you are:
 
@@ -62,10 +60,10 @@ which is Nelle's **home directory**:
 > The home directory path will look different on different operating systems.
 > On Linux it may look like `/home/nelle`,
 > and on Windows it will be similar to `C:\Documents and Settings\nelle` or
-> `C:\Users\nelle`.  
+> `C:\Users\nelle`.
 > (Note that it may look slightly different for different versions of Windows.)
 > In future examples, we've used Mac output as the default - Linux and Windows
-> output may differ slightly, but should be generally similar.  
+> output may differ slightly, but should be generally similar.
 {: .callout}
 
 To understand what a "home directory" is,
@@ -73,7 +71,7 @@ let's have a look at how the file system as a whole is organized.  For the
 sake of this example, we'll be
 illustrating the filesystem on our scientist Nelle's computer.  After this
 illustration, you'll be learning commands to explore your own filesystem,
-which will be constructed in a similar way, but not be exactly identical.  
+which will be constructed in a similar way, but not be exactly identical.
 
 On Nelle's computer, the filesystem looks like this:
 
@@ -89,7 +87,7 @@ Inside that directory are several other directories:
 `data` (for miscellaneous data files),
 `Users` (where users' personal directories are located),
 `tmp` (for temporary files that don't need to be stored long-term),
-and so on.  
+and so on.
 
 We know that our current working directory `/Users/nelle` is stored inside `/Users`
 because `/Users` is the first part of its name.
@@ -102,12 +100,12 @@ because its name begins with `/`.
 > Notice that there are two meanings for the `/` character.
 > When it appears at the front of a file or directory name,
 > it refers to the root directory. When it appears *inside* a name,
-> it's just a separator.
+> it's a separator.
 {: .callout}
 
 Now let's learn the command that will let us see the contents of our
 own filesystem.  We can see what's in our home directory by running `ls`,
-which stands for "listing":
+which stands for "list":
 
 ~~~
 $ ls
@@ -123,12 +121,12 @@ Desktop      Downloads    Movies       Pictures
 (Again, your results may be slightly different depending on your operating
 system and how you have customized your filesystem.)
 
-`ls` prints the names of the files and directories in the current directory. 
+`ls` prints the names of the files and directories in the current directory.
 We can make its output more comprehensible by using the **flag** `-F`
 (also known as a **switch** or an **option**) ,
 which tells `ls` to add a marker to file and directory names to indicate what
 they are. A trailing `/` indicates that this is a directory. Depending on your
-settings, it might also use colors to indicate whether each entry is a file or 
+settings, it might also use colors to indicate whether each entry is a file or
 directory.
 You might recall that we used `ls -F` in an earlier example.
 
@@ -145,37 +143,35 @@ Desktop/      Downloads/    Movies/       Pictures/
 
 ### Getting help
 
-`ls` has lots of other **flags**. There are two common ways to find out how 
+`ls` has lots of other **flags**. There are two common ways to find out how
 to use a command and what flags it accepts:
 
-1. We can pass a `--help` flag to the command, such as:
+1. We can pass a `--help` flag to the command:
     ~~~
     $ ls --help
     ~~~
     {: .bash}
 
-2. We can read its manual with `man`, such as:
+2. We can read its manual with `man`:
     ~~~
-    $ man ls 
+    $ man ls
     ~~~
     {: .bash}
 
-If you use a Mac, or Git for Windows, you might find that only one of these works 
-(probably `man` on Mac and `--help` in Windows). 
+If you use a Mac, or Git for Windows, you might find that only one of these works
+(probably `man` on Mac and `--help` in Windows).
 
-There is a third way: searching the internet via your web browser or better yet use
-[TLDR pages website](https://tldr.ostera.io/).  TLDR pages are a community effort to simplify man pages with practical examples.
+There is a third way: Search the Internet with your web browser or use [TLDR pages website](https://tldr.ostera.io/).
 
 > ## TLDR
 >
-> GNU provides links to its
-> [manuals](http://www.gnu.org/manual/manual.html) but [TLDR pages website](https://tldr.ostera.io/)
-> provides a simple way to search man pages
+> GNU provides links to its [manuals](http://www.gnu.org/manual/manual.html) but the [TLDR pages website](https://tldr.ostera.io/)
+> provides a simple way to search man pages.  TLDR pages are a community effort to simplify man pages with practical examples.
 {: .callout}
 
 #### The `--help` flag
 
-Many bash commands, and programs that people have written that can be
+Many shell commands, and programs that people have written that can be
 run from within bash, support a `--help` flag to display more
 information on how to use the command or program.
 
@@ -306,23 +302,21 @@ or available locally via: info '(coreutils) ls invocation'
 
 #### The `man` command
 
-The other way to learn about `ls` is to type 
+The other way to learn about `ls` is to type
 ~~~
 $ man ls
 ~~~
 {: .bash}
 
-This will turn your terminal into a page with a description 
-of the `ls` command and its options and, if you're lucky, some examples
-of how to use it.
+This change your terminal from a shell prompt to a page with a description of the `ls` command and its options and, in some cases, some examples of how to use it.
 
 To navigate through the `man` pages,
 you may use the up and down arrow keys to move line-by-line,
 or try the "b" and spacebar keys to skip up and down by a full page.
-To search for a character or word in the `man` pages, 
-use "/" followed by the character or word you are searching for. 
+To search for a character or word in the `man` pages,
+use "/" followed by the character or word you are searching for.
 
-To **quit** the `man` pages, press `q`. 
+To **quit** the `man` pages, press `q`.
 
 
 > ## Exploring More `ls` Flags
@@ -351,23 +345,18 @@ To **quit** the `man` pages, press `q`.
 > format to view timestamps.
 >
 > > ## Solution
-> > The files/directories in each directory are sorted by time of last change.
+> > The files or directories in each directory are sorted by time of last change.
 > {: .solution}
 {: .challenge}
 
-Here,
-we can see that our home directory contains mostly **sub-directories**.
-Any names in your output that don't have trailing slashes,
-are plain old **files**.
-And note that there is a space between `ls` and `-F`:
-without it,
-the shell thinks we're trying to run a command called `ls-F`,
-which doesn't exist.
+### Navigating directories
+
+We can see that our home directory contains mostly **sub-directories**.  Any names in your output that don't have trailing slashes, are plain old **files**.  Also note that there is a space between `ls` and `-F`:  Without it, the shell thinks we're trying to run a command called `ls-F`, which doesn't exist.
 
 We can also use `ls` to see the contents of a different directory.  Let's take a
 look at our `data-shell` directory by running `ls -F data-shell`,
 i.e.,
-the command `ls` with the `-F` **flag** and the **argument**  `data-shell`.
+the command `ls` with the `-F` **flag** and the **argument** `data-shell`.
 The argument `data-shell` tells `ls` that
 we want a listing of something other than our current working directory:
 
@@ -376,7 +365,7 @@ $ ls -F data-shell
 ~~~
 {: .language-bash}
 
-Your output should be a list of all the files and sub-directories in your `data-shell` directory 
+Your output should be a list of all the files and sub-directories in your `data-shell` directory
 ~~~
 creatures/          molecules/          notes.txt           solar.pdf
 data/               north-pacific-gyre/ pizza.cfg           writing/
@@ -448,12 +437,12 @@ $ cd data-shell
 ~~~
 {: .error}
 
-But we get an error!  Why is this?  
+But we get an error!  Why is this?
 
 With our methods so far,
 `cd` can only see sub-directories inside your current directory.  There are
 different ways to see directories above your current location; we'll start
-with the simplest.  
+with the simplest.
 
 There is a shortcut in the shell to move up one directory level
 that looks like this:
@@ -496,15 +485,15 @@ $ ls -F -a
 
 `-a` stands for "show all";
 it forces `ls` to show us file and directory names that begin with `.`,
-such as `..` 
+such as `..`
 As you can see,
 it also displays another special directory that's just called `.`,
 which means "the current working directory".
 It may seem redundant to have a name for it,
 but we'll see some uses for it soon.
 
-Note that in most command line tools, multiple flags can be combined 
-with a single `-` and no spaces between the flags: `ls -F -a` is 
+Note that in most command line tools, multiple flags can be combined
+with a single `-` and no spaces between the flags: `ls -F -a` is
 equivalent to `ls -Fa`.
 
 > ## Other Hidden Files
@@ -520,14 +509,14 @@ equivalent to `ls -Fa`.
 
 `pwd`, `ls` and `cd` are the basic commands for navigating the filesystem on your computer.
 Let's explore some variations on those commands.  What happens if you type `cd` on its own, without giving
-a directory?  
+a directory?
 
 ~~~
 $ cd
 ~~~
 {: .language-bash}
 
-How can you check what happened?  `pwd` gives us the answer!  
+How can you check what happened?  `pwd` gives us the answer!
 
 ~~~
 $ pwd
@@ -540,7 +529,7 @@ $ pwd
 {: .output}
 
 It turns out that `cd` without an argument will return you to your home directory,
-which is great if you've gotten lost in your own filesystem.  
+which is great if you've gotten lost in your own filesystem.
 
 Let's try returning to the `data` directory from before.  We can actually string together the list of directories
 to move to `data` in one step:
@@ -550,18 +539,20 @@ $ cd data-shell/data
 ~~~
 {: .language-bash}
 
-Check that we've moved to the right place by running `pwd` and `ls -F`  
+Check that we've moved to the right place by running `pwd` and `ls -F`
 
 If we want to move up one level from the data directory, we could use `cd ..`.  But
 there is another way to move to any directory, regardless of your
-current location.  
+current location.
 
 So far, when specifying directory names, or even a directory path (as above),
 we have been using **relative paths**.  When you use a relative path with a command
 like `ls` or `cd`, it tries to find that location from where we are,
-rather than from the root of the file system.  
+rather than from the root of the file system.
 
-However, it is possible to specify the **absolute path** to a directory by
+### Absolute paths
+
+It is possible to specify the **absolute path** to a directory by
 including its entire path from the root directory, which is indicated by a
 leading slash.  The leading `/` tells the computer to follow the path from
 the root of the file system, so it always refers to exactly one directory,
@@ -570,7 +561,7 @@ no matter where we are when we run the command.
 This allows us to move to our `data-shell` directory from anywhere on
 the filesystem (including from inside `data`).  To find the absolute path
 we're looking for, we can use `pwd` and then extract the piece we need
-to move to `data-shell`.  
+to move to `data-shell`.
 
 ~~~
 $ pwd
@@ -587,7 +578,7 @@ $ cd /home/username/data-shell/data
 ~~~
 {: .language-bash}
 
-Run `pwd` and `ls -F` to ensure that we're in the directory we expect.  
+Run `pwd` and `ls -F` to ensure that we're in the directory we expect.
 
 > ## Two More Shortcuts
 >

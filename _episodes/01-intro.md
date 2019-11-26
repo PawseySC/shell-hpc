@@ -20,17 +20,17 @@ keypoints:
 - "Shell tips a) **CTRL+C:** to kill / exit current process b) **Tab autocomplete:** esp. useful to enter long complex filenames c) **UP arrow:** gives you previous commands entered"
 ---
 ### Background
-We are all familiar with **graphical user interfaces** (GUI - windows, icons and pointers). 
+We are all familiar with **graphical user interfaces** (GUI - windows, icons and pointers).
 They are easy to learn and fantastic for simple tasks where a vocabulary consisting of
-"click" translates easily into "do the thing I want". But this magic relies on 
+"click" translates easily into "do the thing I want". But this magic relies on
 wanting a simple set of things, and having programs that can do exactly those things.
 
 If you wish to do complex, purpose-specific things it helps to have a richer means
 of expressing your instructions to the computer. It doesn't need to be complicated or
 difficult, just a vocabulary of commands and a simple grammar for using them.
 
-This is what the shell provides - a simple language and a **command-line interface** 
-to use it through. 
+This is what the shell provides - a simple language and a **command-line interface**
+to use it through.
 
 The heart of a command-line interface is a **read-evaluate-print loop**, or REPL, called
 so because when you type a command and press the Enter (or Return) key, the shell:
@@ -39,7 +39,7 @@ so because when you type a command and press the Enter (or Return) key, the shel
 3. Prints the output
 
 and then prints the prompt and waits for you to enter another command.
- 
+
 ### The Shell
 
 A shell is a program like any other.
@@ -56,17 +56,17 @@ and in most packages that provide Unix-like tools for Windows.
 A typical shell command and output looks something like this:
 
 ~~~
-bash-3.2$ 
-bash-3.2$ ls -F / 
+bash-3.2$
+bash-3.2$ ls -F /
 Applications/         System/
 Library/              Users/
 Network/              Volumes/
-bash-3.2$ 
+bash-3.2$
 ~~~
 {: .language-bash}
 
 The first line shows only a **prompt**, indicating that the shell is waiting
-for input. Your shell may use different text for the prompt. Most importantly: 
+for input. Your shell may use different text for the prompt. Most importantly:
 when typing commands, either from these lessons or from other sources,
 *do not type the prompt*, only the commands that follow it.
 
@@ -80,21 +80,21 @@ A command can be called with more than one flag and more than one argument: but 
 command doesn't always require an argument or a flag.
 
 In the example above, our **command** is `ls`, with a **flag** `-F` and an
-**argument** `/`. Each part is separated by spaces: if you omit the space 
-between `ls` and `-F` the shell will look for a command called `ls-F`, which 
-doesn't exist. Also, capitalization matters: `LS` is different to `ls`. 
+**argument** `/`. Each part is separated by spaces: if you omit the space
+between `ls` and `-F` the shell will look for a command called `ls-F`, which
+doesn't exist. Also, capitalization matters: `LS` is different to `ls`.
 
-Next we see the output that our command produced. In this case it is a listing 
-of files and folders in a location called `/` - we'll cover what all these mean 
+Next we see the output that our command produced. In this case it is a listing
+of files and folders in a location called `/` - we'll cover what all these mean
 later today. Those with a Mac might recognize the output in this example.
 
-Finally, the shell again prints the prompt and waits for you to type the next 
+Finally, the shell again prints the prompt and waits for you to type the next
 command.
 
 ---
 
 Open a shell window and try entering `ls -F /` for yourself (don't forget that spaces
-and capitalization are important!). 
+and capitalization are important!).
 
 ---
 
@@ -103,56 +103,50 @@ and capitalization are important!).
 ### How does the shell know what `ls` and its flags mean?
 
 Every command is a program stored somewhere on the computer, and the shell keeps a
-list of places to search for commands (the list is in a **variable** called `$PATH`, 
+list of places to search for commands (the list is in a **variable** called `$PATH`,
 but those are concepts we'll meet later and not too important at the moment). Recall
 that commands, flags and arguments are separated by spaces.
 
 So let's look at the REPL (read-evaluate-print loop) in more detail. Notice that the
 "evaluate" step is made of two parts:
 
-1. Read what was typed (`ls -F /` in our example)  
+1. Read what was typed (`ls -F /` in our example)
     The shell uses the spaces to split the line into the command, flags, and arguments
-2. Evaluate:  
-    a. Find a program called `ls`  
-    b. Execute it, passing it the flags and arguments (`-F` and `/`) to 
-       interpret as the program sees fit 
+2. Evaluate:
+    a. Find a program called `ls`
+    b. Execute it, passing it the flags and arguments (`-F` and `/`) to
+       interpret as the program sees fit
 3. Print the output produced by the program
 
 and then print the prompt and wait for you to enter another command.
 
-> ## Command not found 
-> If the shell can't find a program whose name is the command you typed, it 
+> ## Command not found
+> If the shell can't find a program whose name is the command you typed, it
 > will print an erorr message like:
-> 
+>
 > ~~~
 > $ ls-F
 > -bash: ls-F: command not found
 > ~~~
 > {: .language-bash}
-> 
+>
 > Usually this means that you have mis-typed the command - in this case we omitted
-> the space between `ls` and `-F`. 
+> the space between `ls` and `-F`.
 {: .callout}
 
 ### Is it difficult?
 
-It isn't difficult, but it is a different model of interacting than a GUI, and that 
-will take some effort - and some time - to learn. A GUI 
-presents you with choices and you select one. With a CLI the choices are combinations 
-of commands and parameters, more like words in a language than buttons on a screen. They
-are not presented to you so
-you must learn a few, like learning some vocabulary in a new language. But a small 
-number of commands gets you a long way.  Most people need to Google / look up documentation unix commands and don't know off the top of their head
+It isn't difficult, but it is a different model of interacting than a GUI, and that will take some effort - and some time - to learn. A GUI presents you with choices and you select one. With a CLI the choices are combinations of commands and parameters, more like words in a language than buttons on a screen.  They are not presented to you so you must learn a few, like learning some vocabulary in a new language.  But a small number of commands gets you a long way.  Most people need to look up documentation or search the web for Unix commands they don't know off the top of their head.
 
 ![XKCD](../fig/tar_2x.png)
 
 [https://xkcd.com/1168/](https://imgs.xkcd.com/comics/tar.png)
 
-### Flexibility and automation 
+### Flexibility and automation
 
 The grammar of a shell allows you to combine existing tools into powerful
 pipelines and handle large volumes of data automatically. Sequences of
-commands can be written into a *script*, improving the reproducibility of 
+commands can be written into a *script*, improving the reproducibility of
 workflows and allowing you to repeat them easily.
 
 In addition, the command line is often the easiest way to interact with remote machines and supercomputers.
@@ -162,6 +156,16 @@ As clusters and cloud computing systems become more popular for scientific data 
 being able to interact with the shell is becoming a necessary skill.
 We can build on the command-line skills covered here
 to tackle a wide range of scientific questions and computational challenges.
+
+### Shell tips
+
+There are many tricks and techniques that can make using a shell easier or more efficient, in many different situations.
+
+Sometimes we need to stop a command that is running, because it is taking too long, or perhaps we realise that it is not the correct command, or it needs to be run with different arguments. Ctrl-C will send a signal to stop a running command. Press Ctrl-C once, and wait until you are returned to a prompt.
+
+Tab autocompletion is helpful to complete the names of long commands, or even longer complex filenames. To use it, start typing the name and press the tab key. If the shell can unambiguously figure out the command or filename from what you have typed, it will complete it for you. If not, you can press tab twice to display a list of possible options.
+
+To repeat a command that you have previously run in your current shell or even a previous time you ran the shell, you can access the shell history. Press the up arrow key to scroll upward through your most recent commands, right back to the first command you ever typed. Once you have the one you want, you can press Enter to execute it again, or change it to suit what you need this time.
 
 ---
 

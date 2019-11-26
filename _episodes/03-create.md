@@ -17,6 +17,7 @@ keypoints:
 - "Use of the Control key may be described in many ways, including `Ctrl-X`, `Control-X`, and `^X`."
 - "The shell does not have a trash bin: once something is deleted, it's really gone."
 - "Depending on the type of work you do, you may need a more powerful text editor than Nano."
+- "Most files' names are `something.extension`. The extension isn't required, and doesn't guarantee anything, but is normally used to indicate the type of data in the file."
 ---
 
 We now know how to explore files and directories,
@@ -124,17 +125,17 @@ $ nano draft.txt
 >
 > When we say, "`nano` is a text editor," we really do mean "text": it can
 > only work with plain character data, not tables, images, or any other
-> human-friendly media. We use it in examples because it is one of the 
-> least complex text editors. However, because of this trait, it may 
+> human-friendly media. We use Nano in examples because it is one of the
+> least complex text editors. However, because of this trait, it may
 > not be powerful enough or flexible enough for the work you need to do
 > after this workshop. On Unix systems (such as Linux and Mac OS X),
 > many programmers use [Emacs](http://www.gnu.org/software/emacs/) or
-> [Vim](http://www.vim.org/) (both of which require more time to learn), 
+> [Vim](http://www.vim.org/) (both of which require more time to learn),
 > or a graphical editor such as
 > [Gedit](http://projects.gnome.org/gedit/). On Windows, you may wish to
 > use [Notepad++](http://notepad-plus-plus.org/).  Windows also has a built-in
 > editor called `notepad` that can be run from the command line in the same
-> way as `nano` for the purposes of this lesson.  
+> way as `nano` for the purposes of this lesson.
 >
 > No matter what editor you use, you will need to know where it searches
 > for and saves files. If you start it from the shell, it will (probably)
@@ -142,9 +143,9 @@ $ nano draft.txt
 > your computer's start menu, it may want to save files in your desktop or
 > documents directory instead. You can change this by navigating to
 > another directory the first time you "Save As..."
-> 
+>
 > Note: to use Nano on Magnus you must load the nano module using the following command:
->  
+>
 > * `module load nano`
 >
 {: .callout}
@@ -177,7 +178,7 @@ return to the shell.
 > In nano, along the bottom of the screen you'll see `^G Get Help ^O WriteOut`.
 > This means that you can use `Control-G` to get help and `Control-O` to save your
 > file.
-> 
+>
 {: .callout}
 
 `nano` doesn't leave any output on the screen after it exits,
@@ -215,7 +216,7 @@ draft.txt
 > > ## Solution
 > > 1.  The touch command generates a new file called 'my_file.txt' in
 > >     your home directory.  If you are in your home directory, you
-> >     can observe this newly generated file by typing 'ls' at the 
+> >     can observe this newly generated file by typing 'ls' at the
 > >     command line prompt.  'my_file.txt' can also be viewed in your
 > >     GUI file explorer.
 > >
@@ -271,7 +272,7 @@ $ pwd
 {: .language-bash}
 
 ~~~
-//home/username/data-shell/thesis
+/home/username/data-shell/thesis
 ~~~
 {: .output}
 
@@ -323,9 +324,9 @@ $ rm -r thesis
 > > ```
 > > $ rm: remove regular file 'thesis/quotations.txt'?
 > > ```
-> > {: .language-bash} 
-> > The -i option will prompt before every removal. 
-> > The Unix shell doesn't have a trash bin, so all the files removed will disappear forever. 
+> > {: .language-bash}
+> > The -i option will prompt before every removal.
+> > The Unix shell doesn't have a trash bin, so all the files removed will disappear forever.
 > > By using the -i flag, we have the chance to check that we are deleting only the files that we want to remove.
 > {: .solution}
 {: .challenge}
@@ -367,7 +368,7 @@ $ pwd
 
 ~~~
 $ mkdir thesis
-$ cd thesis 
+$ cd thesis
 $ nano draft.txt
 $ ls
 ~~~
@@ -423,7 +424,7 @@ To prove that we made a copy,
 let's run `ls` again.
 
 ~~~
-$ ls 
+$ ls
 ~~~
 {: .language-bash}
 
