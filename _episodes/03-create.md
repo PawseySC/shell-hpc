@@ -351,7 +351,7 @@ $ rm -r thesis
 {: .callout}
 
 > ## Horror stories
-> There are many *rm -r* horror stories including how the movie Toy Story 2 accidently got [deleted](https://thenextweb.com/media/2012/05/21/how-pixars-toy-story-2-was-deleted-twice-once-by-technology-and-again-for-its-own-good/) and was only recovered from a Technical Director's home computer
+> There are many *rm -r* horror stories including how the movie Toy Story 2 accidently got [deleted](https://thenextweb.com/media/2012/05/21/how-pixars-toy-story-2-was-deleted-twice-once-by-technology-and-again-for-its-own-good/) and was only recovered from a Technical Director's home computer.   Story told via [YouTube video](https://youtu.be/QxFNkmJNuE4)
 {: .callout}
 
 Let's create that directory and file one more time.
